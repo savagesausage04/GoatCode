@@ -7,25 +7,34 @@
 
 import SwiftUI
 
+struct CustomColor {
+    static let myColor = Color("lightBrown")
+}
 
 struct ContentView: View {
     var body: some View {
-        /*ZStack {
-            Color(.black).ignoresSafeArea()
+        ZStack {
+            .color(CustomColor.myColor)
             
             VStack {
-                Text("Welcome to GoatCode.")            .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/).fontWeight(.semibold).foregroundColor(Color.white)
-
+                
                 Image("Goat")
                     .resizable()
                     .cornerRadius(10)
                     .aspectRatio(contentMode: .fit)
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .padding(/*@START_MENU_TOKEN@*/[.top, .leading, .trailing]/*@END_MENU_TOKEN@*/)
+                Text("GoatCode")          .fontWeight(.semibold).foregroundColor(Color.white)
+                    .font(.system(size: 40))
+                Text("Learn code anywhere, anytime.")
+                    .foregroundColor(Color.white)
+                    
+                    
+
                 
             }
         }
-        */
-        ZStack {
+        
+        /*ZStack {
             RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/10.0/*@END_MENU_TOKEN@*/)
                 .frame(height: 600.0)
                 .foregroundColor(Color.blue)
@@ -50,8 +59,9 @@ struct ContentView: View {
             .padding(.horizontal, 10.0)
             
         }
-        
+        */
     }
+    
 }
    
     
