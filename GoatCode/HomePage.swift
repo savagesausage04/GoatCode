@@ -20,19 +20,22 @@ struct HomePage: View {
         
         if (homePageTap == false){
                 VStack {
-                    Spacer()
-                    Text("Welcome to GoatCode.")            .font(.largeTitle).fontWeight(.semibold).foregroundColor(Color.white)
+                
+                    
                     
                     Image("Goat")
                         .resizable()
+                        .padding(.all)
                         .cornerRadius(10)
                         .aspectRatio(contentMode: .fit)
-                        .padding(.all)
                         .onTapGesture {
                             homePageTap = true
                         }
+                    Text("Welcome to GoatCode.")            .font(.largeTitle).fontWeight(.semibold).foregroundColor(Color.white)
                     Spacer()
-                } .background(Color.red)
+                    
+                }
+                .background(Color.red.edgesIgnoringSafeArea(.all))
         }
     }
     

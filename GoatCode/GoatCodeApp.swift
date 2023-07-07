@@ -12,7 +12,7 @@ struct GoatCodeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomePage()
+            //HomePage()
             UnitPage()
         }
     }
