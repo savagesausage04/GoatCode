@@ -12,7 +12,6 @@ struct GoatCodeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
             HomePage()
             UnitPage()
         }

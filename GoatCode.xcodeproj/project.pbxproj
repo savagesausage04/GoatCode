@@ -80,7 +80,6 @@
 		1460EF192A37ADDD008A0847 = {
 			isa = PBXGroup;
 			children = (
-				D4F338D82A5797010014B667 /* StoryboardFiles */,
 				1460EF242A37ADDD008A0847 /* GoatCode */,
 				1460EF3A2A37ADDF008A0847 /* GoatCodeTests */,
 				1460EF442A37ADDF008A0847 /* GoatCodeUITests */,
@@ -135,14 +134,6 @@
 				1460EF472A37ADDF008A0847 /* GoatCodeUITestsLaunchTests.swift */,
 			);
 			path = GoatCodeUITests;
-			sourceTree = "<group>";
-		};
-		D4F338D82A5797010014B667 /* StoryboardFiles */ = {
-			isa = PBXGroup;
-			children = (
-				D4F338D62A578EB80014B667 /* Main.storyboard */,
-			);
-			path = StoryboardFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +241,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1460EF2D2A37ADDF008A0847 /* Preview Assets.xcassets in Resources */,
-				D4F338D72A578EB80014B667 /* Main.storyboard in Resources */,
 				1460EF2A2A37ADDF008A0847 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
