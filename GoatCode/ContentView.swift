@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct CustomColor {
-    static let myColor = Color("lightBrown")
-}
+
 
 struct ContentView: View {
     var body: some View {

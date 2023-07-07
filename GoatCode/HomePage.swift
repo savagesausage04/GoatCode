@@ -8,9 +8,13 @@
 import SwiftUI
 import Foundation
 
-let backgroundGradient = LinearGradient(
-    colors: [Color.blue, Color.orange],
-    startPoint: .top, endPoint: .bottom)
+//let backgroundGradient = LinearGradient(
+    //colors: [Color.blue, Color.orange],
+    //startPoint: .top, endPoint: .bottom)
+
+struct CustomColor {
+    static let myColor = Color("lightBrown")
+}
 
 struct HomePage: View {
     

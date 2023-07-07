@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1460EF262A37ADDD008A0847 /* GoatCodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460EF252A37ADDD008A0847 /* GoatCodeApp.swift */; };
-		1460EF282A37ADDD008A0847 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460EF272A37ADDD008A0847 /* ContentView.swift */; };
 		1460EF2A2A37ADDF008A0847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1460EF292A37ADDF008A0847 /* Assets.xcassets */; };
 		1460EF2D2A37ADDF008A0847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1460EF2C2A37ADDF008A0847 /* Preview Assets.xcassets */; };
 		1460EF3C2A37ADDF008A0847 /* GoatCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460EF3B2A37ADDF008A0847 /* GoatCodeTests.swift */; };
@@ -39,7 +38,6 @@
 /* Begin PBXFileReference section */
 		1460EF222A37ADDD008A0847 /* GoatCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoatCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1460EF252A37ADDD008A0847 /* GoatCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatCodeApp.swift; sourceTree = "<group>"; };
-		1460EF272A37ADDD008A0847 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1460EF292A37ADDF008A0847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1460EF2C2A37ADDF008A0847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1460EF372A37ADDF008A0847 /* GoatCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoatCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				1460EF252A37ADDD008A0847 /* GoatCodeApp.swift */,
-				1460EF272A37ADDD008A0847 /* ContentView.swift */,
 				1496893C2A5786FD000A8E4F /* HomePage.swift */,
 				1496893E2A579097000A8E4F /* UnitPage.swift */,
 				149689402A579414000A8E4F /* LevelPage.swift */,
@@ -266,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1460EF282A37ADDD008A0847 /* ContentView.swift in Sources */,
 				1496893D2A5786FD000A8E4F /* HomePage.swift in Sources */,
 				1496893F2A579097000A8E4F /* UnitPage.swift in Sources */,
 				1460EF262A37ADDD008A0847 /* GoatCodeApp.swift in Sources */,
