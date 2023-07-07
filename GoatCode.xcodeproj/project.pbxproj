@@ -14,7 +14,9 @@
 		1460EF3C2A37ADDF008A0847 /* GoatCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460EF3B2A37ADDF008A0847 /* GoatCodeTests.swift */; };
 		1460EF462A37ADDF008A0847 /* GoatCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460EF452A37ADDF008A0847 /* GoatCodeUITests.swift */; };
 		1460EF482A37ADDF008A0847 /* GoatCodeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460EF472A37ADDF008A0847 /* GoatCodeUITestsLaunchTests.swift */; };
-		D4F338D72A578EB80014B667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F338D62A578EB80014B667 /* Main.storyboard */; };
+		1496893D2A5786FD000A8E4F /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496893C2A5786FD000A8E4F /* HomePage.swift */; };
+		1496893F2A579097000A8E4F /* UnitPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496893E2A579097000A8E4F /* UnitPage.swift */; };
+		149689412A579414000A8E4F /* LevelPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149689402A579414000A8E4F /* LevelPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +47,9 @@
 		1460EF412A37ADDF008A0847 /* GoatCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoatCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1460EF452A37ADDF008A0847 /* GoatCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatCodeUITests.swift; sourceTree = "<group>"; };
 		1460EF472A37ADDF008A0847 /* GoatCodeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoatCodeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D4F338D62A578EB80014B667 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1496893C2A5786FD000A8E4F /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		1496893E2A579097000A8E4F /* UnitPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitPage.swift; sourceTree = "<group>"; };
+		149689402A579414000A8E4F /* LevelPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,9 @@
 			children = (
 				1460EF252A37ADDD008A0847 /* GoatCodeApp.swift */,
 				1460EF272A37ADDD008A0847 /* ContentView.swift */,
+				1496893C2A5786FD000A8E4F /* HomePage.swift */,
+				1496893E2A579097000A8E4F /* UnitPage.swift */,
+				149689402A579414000A8E4F /* LevelPage.swift */,
 				1460EF292A37ADDF008A0847 /* Assets.xcassets */,
 				1460EF2B2A37ADDF008A0847 /* Preview Content */,
 			);
@@ -270,7 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1460EF282A37ADDD008A0847 /* ContentView.swift in Sources */,
+				1496893D2A5786FD000A8E4F /* HomePage.swift in Sources */,
+				1496893F2A579097000A8E4F /* UnitPage.swift in Sources */,
 				1460EF262A37ADDD008A0847 /* GoatCodeApp.swift in Sources */,
+				149689412A579414000A8E4F /* LevelPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
