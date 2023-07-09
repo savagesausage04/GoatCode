@@ -12,9 +12,7 @@ import Foundation
     //colors: [Color.blue, Color.orange],
     //startPoint: .top, endPoint: .bottom)
 
-struct CustomColor {
-    static let myColor = Color("lightBrown")
-}
+
 
 struct HomePage: View {
     
