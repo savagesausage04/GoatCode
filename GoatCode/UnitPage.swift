@@ -35,10 +35,10 @@ struct UnitPage: View {
                                             .fill(Color("lightBrown"))
                                             .frame(width: 100, height: 100)
                                         
-                                        Text("\(16 - index)")
+                                        Text("\(index + 1)")
                                             .font(.system(size: 24, weight: .bold, design: .rounded))
                                             .foregroundColor(.white)
-                                    }
+                                    }.rotationEffect(.degrees(180))
                                     .offset(x: xPositions[index])
                                 }
                             }
@@ -47,6 +47,7 @@ struct UnitPage: View {
                     }
                 }
             }
+            .rotationEffect(.degrees(180))
         }
     }
 }
@@ -68,8 +69,11 @@ struct DividerView: View {
                 .foregroundColor(.gray)
         }
         .frame(height: 40)
+        .rotationEffect(.degrees(180))
     }
 }
+
+
 
 
         
