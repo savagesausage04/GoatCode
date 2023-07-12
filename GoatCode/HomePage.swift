@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 import Foundation
 
 //let backgroundGradient = LinearGradient(
@@ -13,34 +14,44 @@ import Foundation
     //startPoint: .top, endPoint: .bottom)
 
 
-
+let lightBrown = UIColor(named: "lightBrown")
 struct HomePage: View {
     
     @State var homePageTap = false
     
     var body: some View {
-        
-        if (homePageTap == false){
+        ZStack {
+            // Use the color as background
+            Color("lightBrown")
+                .edgesIgnoringSafeArea(.all)  // Ignore safe area to fill entire screen
+            
+            // Content of the page
+            if (homePageTap == false){
                 VStack {
-                
-                    
-                    
-                    Image("Goat")
+                    Spacer()  // Pushes content towards the center
+
+                    Image("goat")
                         .resizable()
-                        .padding(.all)
+                        .padding([.top, .leading, .trailing])
                         .cornerRadius(10)
                         .aspectRatio(contentMode: .fit)
                         .onTapGesture {
                             homePageTap = true
                         }
-                    Text("Welcome to GoatCode.")            .font(.largeTitle).fontWeight(.semibold).foregroundColor(Color.white)
-                    Spacer()
+
+                    Text("GoatCode")
+                        .font(.largeTitle)
+                        .fontWeight(.light)
+                        .foregroundColor(Color.black)
                     
+                    Spacer()  // Pushes content towards the center
                 }
-                .background(Color.red.edgesIgnoringSafeArea(.all))
+            }
         }
     }
-    
+}
+
+
     
     
     
@@ -52,4 +63,4 @@ struct HomePage: View {
     }
     
     
-}
+
