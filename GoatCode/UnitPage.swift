@@ -10,44 +10,78 @@ import Foundation
 
 
 struct UnitPage: View {
-    @State var homePageTap = false
+    @State var showHome = true
     
     var body: some View {
-        NavigationView {
-            ScrollView(showsIndicators: false) {
-                LazyVStack {
-                    let xPositions: [CGFloat] = [50, 100, 20, -20, -10,
-                                                 60, 80, -20, -40, 30, 50, 0, 50, -40, 50, 0,]
+        if showHome {
+            ZStack {
+                // Use the color as background
+                Color("lightBrown")
+                    .edgesIgnoringSafeArea(.all)  // Ignore safe area to fill entire screen
+                
+                // Content of the page
+                VStack {
+                    Spacer()  // Pushes content towards the center
                     
-                    VStack(spacing: 40) {
-                        ForEach(0..<16) { index in
-                            if index % 4 == 0 && index != 0 {
-                                DividerView()
-                            }
-                            
-                            Button(action: {
-                                // Add your button action code here
-                                print("Button \(index + 1) tapped!")
-                            }) {
-                                NavigationLink(destination: LevelPage()) {
-                                    ZStack {
-                                        Circle()
-                                            .fill(Color("lightBrown"))
-                                            .frame(width: 100, height: 100)
-                                        
-                                        Text("\(index + 1)")
-                                            .font(.system(size: 24, weight: .bold, design: .rounded))
-                                            .foregroundColor(.white)
-                                    }.rotationEffect(.degrees(180))
-                                    .offset(x: xPositions[index])
+                    Image("Goat")
+                        .resizable()
+                        .padding([.top, .leading, .trailing])
+                        .cornerRadius(10)
+                        .aspectRatio(contentMode: .fit)
+                    
+                    Text("GoatCode")
+                        .font(.largeTitle)
+                        .fontWeight(.light)
+                        .foregroundColor(Color.black)
+                        .onTapGesture{
+                            showHome = false
+                        }
+                    /*Rectangle()
+                        .foregroundColor(Color.black.opacity(0.5))
+                        .frame(width: geometry.size.width, height: geometry.size.width, alignment: .center)*/
+                    
+                    Spacer()  // Pushes content towards the center
+                }
+                
+            }
+        }
+        else{
+            NavigationView {
+                ScrollView(showsIndicators: false) {
+                    LazyVStack {
+                        let xPositions: [CGFloat] = [50, 100, 20, -20, -10,
+                                                     60, 80, -20, -40, 30, 50, 0, 50, -40, 50, 0,]
+                        
+                        VStack(spacing: 40) {
+                            ForEach(0..<16) { index in
+                                if index % 4 == 0 && index != 0 {
+                                    DividerView()
+                                }
+                                
+                                Button(action: {
+                                    // Add your button action code here
+                                    print("Button \(index + 1) tapped!")
+                                }) {
+                                    NavigationLink(destination: LevelPage()) {
+                                        ZStack {
+                                            Circle()
+                                                .fill(Color("lightBrown"))
+                                                .frame(width: 100, height: 100)
+                                            
+                                            Text("\(index + 1)")
+                                                .font(.system(size: 24, weight: .bold, design: .rounded))
+                                                .foregroundColor(.white)
+                                        }.rotationEffect(.degrees(180))
+                                            .offset(x: xPositions[index])
+                                    }
                                 }
                             }
+                            DividerView()
                         }
-                        DividerView()
                     }
                 }
+                .rotationEffect(.degrees(180))
             }
-            .rotationEffect(.degrees(180))
         }
     }
 }

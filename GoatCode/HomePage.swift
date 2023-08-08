@@ -9,6 +9,7 @@ import SwiftUI
 
 import Foundation
 
+
 //let backgroundGradient = LinearGradient(
     //colors: [Color.blue, Color.orange],
     //startPoint: .top, endPoint: .bottom)
@@ -26,32 +27,30 @@ struct HomePage: View {
                 .edgesIgnoringSafeArea(.all)  // Ignore safe area to fill entire screen
             
             // Content of the page
-            if (homePageTap == false){
                 VStack {
                     Spacer()  // Pushes content towards the center
-
+                    
                     Image("goat")
                         .resizable()
                         .padding([.top, .leading, .trailing])
                         .cornerRadius(10)
                         .aspectRatio(contentMode: .fit)
-                        .onTapGesture {
-                            homePageTap = true
-                        }
-
+                    
                     Text("GoatCode")
                         .font(.largeTitle)
                         .fontWeight(.light)
                         .foregroundColor(Color.black)
-                    
-                    Spacer()  // Pushes content towards the center
-                }
+        
+                        
+                        
+                        Spacer()  // Pushes content towards the center
+                    }
+                
             }
         }
     }
-}
-
-
+    
+    
     
     
     
@@ -62,5 +61,5 @@ struct HomePage: View {
         
     }
     
-    
+
 
