@@ -18,6 +18,9 @@ struct UnitPage: View {
                 // Use the color as background
                 Color("lightBrown")
                     .edgesIgnoringSafeArea(.all)  // Ignore safe area to fill entire screen
+                    .onTapGesture{
+                        showHome = false
+                    }
                 
                 // Content of the page
                 VStack {
@@ -29,16 +32,17 @@ struct UnitPage: View {
                         .cornerRadius(10)
                         .aspectRatio(contentMode: .fit)
                     
-                    Text("GoatCode")
+                    Text("Welcome to GoatCode")
                         .font(.largeTitle)
                         .fontWeight(.light)
                         .foregroundColor(Color.black)
-                        .onTapGesture{
-                            showHome = false
-                        }
-                    /*Rectangle()
-                        .foregroundColor(Color.black.opacity(0.5))
-                        .frame(width: geometry.size.width, height: geometry.size.width, alignment: .center)*/
+                        .offset(y: -40)
+                    
+                    Text("Tap to continue...")
+                        .font(.body)
+                        .offset(y: 70)
+                        .opacity(0.5)
+
                     
                     Spacer()  // Pushes content towards the center
                 }
