@@ -17,9 +17,10 @@ struct UnitPage: View {
             ZStack {
                 // Use the color as background
                 Color("lightBrown")
-                    .edgesIgnoringSafeArea(.all)  // Ignore safe area to fill entire screen
-                
-                // Content of the page
+                    .edgesIgnoringSafeArea(.all)
+                    .onTapGesture {
+                        showHome = false
+                    }
                 VStack {
                     Spacer()  // Pushes content towards the center
                     
@@ -33,14 +34,9 @@ struct UnitPage: View {
                         .font(.largeTitle)
                         .fontWeight(.light)
                         .foregroundColor(Color.black)
-                        .onTapGesture{
-                            showHome = false
-                        }
-                    /*Rectangle()
-                        .foregroundColor(Color.black.opacity(0.5))
-                        .frame(width: geometry.size.width, height: geometry.size.width, alignment: .center)*/
+                        
                     
-                    Spacer()  // Pushes content towards the center
+                    Spacer()
                 }
                 
             }
