@@ -17,6 +17,9 @@ struct LevelPage: View {
         "this is message three"
     ]
     
+var lessonCall: Double
+    
+    let message = "Lorem ipsum dolor sit amet, consdipiscing elit. Nullam et velit diam. Morbi pellentesque nisl sit amet tempus gravida. Suspendisse potenti. Suspendisse potenti."
     var body: some View {
         ZStack {
             Color("lightBrown")
@@ -101,7 +104,7 @@ struct LevelPage: View {
     
 struct LevelPage_Previews: PreviewProvider {
     static var previews: some View {
-        LevelPage()
+        LevelPage(lessonCall: 1.1)
     }
     
 }
