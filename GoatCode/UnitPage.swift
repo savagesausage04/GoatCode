@@ -49,7 +49,7 @@ struct UnitPage: View {
                 
             }
         }
-        else{
+        else {
             NavigationView {
                 ScrollView(showsIndicators: false) {
                     LazyVStack {
@@ -75,7 +75,6 @@ struct UnitPage: View {
                                 }
                                 
                                 Button(action: {
-                                    // Add your button action code here
                                     print("Button \(index + 1) tapped!")
                                 }) {
                                     NavigationLink(destination: LevelPage(lessonCall: unitsVal[index])) {
