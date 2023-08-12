@@ -88,12 +88,21 @@ struct UnitPage: View {
                                             Text(String(unitsVal[index]))
                                                 .font(.system(size: 24, weight: .bold, design: .rounded))
                                                 .foregroundColor(.white)
-                                        }.rotationEffect(.degrees(180))
-                                            .offset(x: xPositions[index])
+                                        }
+                                        .rotationEffect(.degrees(180))
+                                        
                                     }
                                 }
+                                .offset(x: xPositions[index])
+
                             }
                             DividerView(title:"The End")
+                            Image("Goat")
+                                .resizable()
+                                .padding([.top, .leading, .trailing])
+                                .cornerRadius(10)
+                                .aspectRatio(contentMode: .fit)
+                                .rotationEffect(.degrees(180))
                         }
                     }
                 }
