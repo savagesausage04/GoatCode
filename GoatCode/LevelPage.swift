@@ -12,66 +12,15 @@ import Foundation
 struct LevelPage: View {
     @State private var messageIndex = 0
     let messages: [String] = [
-        "this is message one jdkfjkdjfkdjfdfdjfkdjfkdf kdj fkd fkjdk fkd fkdj fkdjfk dkfdkjfkdkfkd fjkdj",
-        "this is message two jdkfjdkf dkjf kdfkdjf dkjf kdjf dk fkdjf kdj fkdjfkjdk jfkd fdkf dkfdfkdfkdfkdkfjkdf",
-        "this is message three dkfjkdjf dkfj kdjf kdjfkdjfkdjf dkfj kdj fkdj fkdj fkdjfkjdkfjkd fkfjdkfj dkfjdkjfkdjkfjdkjfkd fjkdjfkdjfkjdkfjdkjfkdjfkdjfkdjkfjdkjf dkf dkj fkdj fkd jfkd"
+        "this is message one",
+        "this is message two",
+        "this is message three"
     ]
     
     var body: some View {
         ZStack {
             Color("lightBrown")
                 .ignoresSafeArea()
-       
-        
-        
-         ZStack {
-         Color("lightBrown")
-                 .ignoresSafeArea()
-            
-         Image("chevron-forward-outline")
-                  .resizable()
-                  .aspectRatio(contentMode: .fit)
-                  .offset(x: 150, y: 350)
-                  .frame(width: 50.0)
-    
-         Image("chevron-back-outline")
-                  .resizable()
-                  .aspectRatio(contentMode: .fit)
-                  .offset(x: 70, y: 350)
-                  .frame(width: 50.0)
-         
-         VStack(alignment: .leading, spacing: 20.0) {
-         
-         Text("Intro to Loops")            .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/).fontWeight(.semibold).padding(.horizontal)
-         
-             Text(message)
-         .font(.title2)
-         .padding()
-         .background(.white)
-         .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
-         .overlay(alignment: .bottomLeading) {
-             Image(systemName: "arrowtriangle.down.fill")
-                 .font(.largeTitle)
-                 .rotationEffect(.degrees(30))
-                 .offset(x: 10, y: 20)
-                 .foregroundColor(.white)
-         }
-            
-         
-         Image("bubble")
-                 .resizable()
-                 .frame(width: 175.0, height: 175.0)
-                 .padding(/*@START_MENU_TOKEN@*/.horizontal/*@END_MENU_TOKEN@*/)
-                 .offset(y: 20)
-            
-             
-         }
-         .padding(.horizontal, 10.0)
-         
-         }
-        
-        
-       
             
             VStack {
                 // Title at top center
@@ -84,7 +33,7 @@ struct LevelPage: View {
                 
                 Spacer()
                 
-                // Text above the "bubble" image
+                // Text above the "bubble" image with added vertical padding for space
                 Text(messages[messageIndex])
                     .font(.title2)
                     .frame(maxWidth: .infinity) // Ensure width is consistent
@@ -94,12 +43,11 @@ struct LevelPage: View {
                     .overlay(alignment: .bottomLeading) {
                         Image(systemName: "arrowtriangle.down.fill")
                             .font(.largeTitle)
-                            .rotationEffect(.degrees(15))
-                            .offset(x: 60, y: 20)
+                            .rotationEffect(.degrees(30))
+                            .offset(x: 10, y: 20)
                             .foregroundColor(.white)
                     }
                     .padding(.bottom, 30) // Added vertical padding
-
                 
                 // Stationary "bubble" image anchored to the left
                 HStack {
@@ -147,6 +95,7 @@ struct LevelPage: View {
         }
     }
 }
+
 
     
     
