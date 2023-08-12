@@ -13,6 +13,7 @@ struct UnitPage: View {
     @State var showHome = true
     
     var body: some View {
+        //------------------------ HOME PAGE ------------------------------------
         if showHome {
             ZStack {
                 // Use the color as background
@@ -49,6 +50,7 @@ struct UnitPage: View {
                 
             }
         }
+        //-----------------------------UNIT PAGE---------------------------------
         else {
             NavigationView {
                 ScrollView(showsIndicators: false) {

@@ -9,17 +9,18 @@ import Foundation
 
 
 
+
+
 struct LevelPage: View {
     @State private var messageIndex = 0
     let messages: [String] = [
-        "this is message one",
-        "this is message two",
-        "this is message three"
+        "this is message 1",
+        "this is message 2",
+        "this is message 3"
     ]
     
-var lessonCall: Double
+    var lessonCall: Double
     
-    let message = "Lorem ipsum dolor sit amet, consdipiscing elit. Nullam et velit diam. Morbi pellentesque nisl sit amet tempus gravida. Suspendisse potenti. Suspendisse potenti."
     var body: some View {
         ZStack {
             Color("lightBrown")
@@ -30,16 +31,16 @@ var lessonCall: Double
                 Text("Intro to Loops")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
-                    .padding(.top, 20)
+                    .padding(.top, 30)
                     .padding(.horizontal)
-                    .frame(maxWidth: .infinity, alignment: .center)  // This centers the title
+                    .frame(maxWidth: .infinity, alignment: .center)
                 
                 Spacer()
                 
-                // Text above the "bubble" image with added vertical padding for space
+                // Text above the "bubble" image
                 Text(messages[messageIndex])
                     .font(.title2)
-                    .frame(maxWidth: .infinity) // Ensure width is consistent
+                    .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
@@ -50,7 +51,7 @@ var lessonCall: Double
                             .offset(x: 10, y: 20)
                             .foregroundColor(.white)
                     }
-                    .padding(.bottom, 30) // Added vertical padding
+                    .padding(.bottom, 30)
                 
                 // Stationary "bubble" image anchored to the left
                 HStack {
@@ -58,19 +59,22 @@ var lessonCall: Double
                         .resizable()
                         .frame(width: 175.0, height: 175.0)
                         .padding(.horizontal)
-                        .padding(.bottom, 20) // This provides space from the bottom
+                        .padding(.bottom, 20)
 
-                    Spacer()  // Pushes the image to the left
+                    Spacer()
                 }
             }
             .padding(.horizontal, 10.0)
 
-            // Buttons placement
+            // Buttons placement with message indicator
             VStack {
-                Spacer() // Push content to the bottom
+                Spacer()
+                
+                // Message number indicator
+                  // A little space from the buttons
                 
                 HStack {
-                    Spacer() // Push content to the right
+                    Spacer()
                     
                     Image("chevron-back-outline")
                         .resizable()
@@ -82,6 +86,12 @@ var lessonCall: Double
                             }
                         }
                     
+                    Text("\(messageIndex + 1)/\(messages.count)")
+                        .font(.title2)
+                        .fontWeight(.medium)
+                        .foregroundColor(Color.black)
+                        .padding(.bottom, 10)
+                    
                     Image("chevron-forward-outline")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -92,12 +102,14 @@ var lessonCall: Double
                             }
                         }
                 }
-                .padding(.bottom, 30)  // Space from the bottom edge
-                .padding(.trailing, 30)  // Space from the right edge
+                .padding(.bottom, 30)
+                .padding(.trailing, 30)
             }
         }
     }
 }
+
+
 
 
     
