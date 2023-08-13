@@ -70,6 +70,7 @@ struct UnitPage: View {
                                              "Functions",]
                             
                             VStack(spacing: 40) {
+                                Spacer()
                                 DividerView(title:"\(unitNames[0])")
                                 //unitCount += 1
                                 ForEach(0..<20) { index in
@@ -152,8 +153,8 @@ struct GradientBackgroundAnimation: View {
     
     @State private var animateGradient: Bool = false
     
-    private let startColor: Color = .blue
-    private let endColor: Color = .green
+    private let startColor: Color = Color("Gradient1")
+    private let endColor: Color = Color("Gradient2")
     
     var body: some View {
             LinearGradient(colors: [startColor, endColor], startPoint: .topLeading, endPoint: .bottomTrailing)

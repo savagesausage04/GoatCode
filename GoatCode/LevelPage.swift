@@ -19,18 +19,19 @@ let unitNames = ["Intro to Python",
 
 struct LevelPage: View {
     @State private var messageIndex = 0
-    let messages: [String] = [
-        "this is message 1",
-        "this is message 2",
-        "this is message 3",
-        "IMG: blockCode",
-        "post image mortel"
-    ]
-    
+//    let messages: [String] = [
+//        "this is message 1",
+//        "this is message 2",
+//        "this is message 3",
+//        "IMG: blockCode",
+//        "post image mortel"
+//    ]
+//
     var lessonCall: Double
     
-
+    
     var body: some View {
+        let messages: [String] = lessonMapper[lessonCall]!
         ZStack {
             Color("lightBrown")
                 .ignoresSafeArea()
@@ -56,6 +57,12 @@ struct LevelPage: View {
                             .padding([.top, .leading, .trailing])
                             .cornerRadius(10)
                             .aspectRatio(contentMode: .fit)
+                            //.rotationEffect(.degrees(180))
+                    }
+                    else if (messages[messageIndex].prefix(3) == "QST")
+                    {
+                        let qArr: [String] = questionMapper[String(messages[messageIndex].dropFirst(5))]!
+                        MultipleChoiceQuestionView(question: qArr[0], options: [qArr[1],qArr[2],qArr[3],qArr[4]],correctAnswer:qArr[5])
                             //.rotationEffect(.degrees(180))
                     }
                     else
