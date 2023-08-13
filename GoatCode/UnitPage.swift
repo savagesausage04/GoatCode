@@ -171,6 +171,7 @@ struct GradientBackgroundAnimation: View {
         
 struct UnitPage_Previews: PreviewProvider {
     static var previews: some View {
+        UnitPage()
             
     }
 
