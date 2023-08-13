@@ -9,13 +9,33 @@ import Foundation
 
 let lessonMapper: [Double: [String]] = [1.1: unit1_lesson1, 1.2: unit1_lesson2, 1.3: unit1_lesson3, 2.1: unit2_lesson1, 2.2: unit2_lesson2, 2.3: unit2_lesson3, 2.4: unit2_lesson4, 2.5: unit2_lesson5, 3.1: unit3_lesson1, 3.2: unit3_lesson2, 3.3: unit3_lesson3, 4.1: unit4_lesson1, 4.2: unit4_lesson2, 4.3: unit4_lesson3]
 
-let questionMapper: [String: [String]] = ["U2_L3_Q1":U2_L3_Q1]
+
+let questionMapper: [String: [String]] = ["U2_L2_Q1": U2_L2_Q1, //done
+                                          "U2_L2_Q2": U2_L2_Q2, //done
+                                          "U2_L3_Q1": U2_L3_Q1, //done
+                                          "U2_L3_Q2": U2_L3_Q2, //done
+                                          "U2_L4_Q1": U2_L4_Q1,
+                                          "U2_L5_Q1": U2_L5_Q1,
+                                          "U2_L5_Q2": U2_L5_Q2,
+                                          "U3_L1_Q1": U3_L1_Q1,
+                                          "U3_L2_Q1": U3_L2_Q1,
+                                          "U3_L3_Q1": U3_L3_Q1,
+                                          "U4_L1_Q1": U4_L1_Q1,
+                                          "U4_L2_Q1": U4_L2_Q1,
+                                          "U4_L3_Q1": U4_L3_Q1, //done
+                                          "U5_L2_Q1": U5_L2_Q1, //done
+                                          "U5_L3_Q1": U5_L3_Q1, //done
+                                          "U6_L2_Q1": U6_L2_Q1, //done
+                                          "U6_L3_Q1": U6_L3_Q1  //done
+                                          ]
 // To add an image, put image in "lessonPictures" and add it to array like this
 // "IMG: [name]",
 // make sure [name] is the name of pic
 
 //format for questions
 //question, choice1, choice2, choice3, choice4, answer
+let U2_L2_Q1: [String] =
+let U2_L2_Q2: [String] =
 let U2_L3_Q1: [String] = ["Make an integer variable named “goats” and set it equal to 5.","goats = 5","goats = “5”", "goats = five", "goats = 5.0", "goats = 5"]
 let U2_L3_Q2: [String] = ["Bob and Alice are two goat farmers that want to combine their goats into one herd. However, they hate doing math, and want to make a computer do it for them. If there is a predefined integer ‘bobsGoats’ and another predefined integer ‘alicesGoats’, create a variable ‘totalGoats’ and set it equal to the total.","totalGoats = bobsGoats - alicesGoats","bobsGoats + alicesGoats = totalGoats", "totalGoats = alicesGoats, bobsGoats", "totalGoats = bobsGoats + alicesGoats", "totalGoats = bobsGoats + alicesGoats"]
 let U2_L4_Q1: [String] = ["Create a boolean variable named “hasGoats” and set its value as True.","hasGoats = True","hasGoats = False", "hasGoats = true", "hasGoats = “True”", "hasGoats = True"]
@@ -128,15 +148,6 @@ let unit2_lesson2: [String] = [
 ]
 
 let unit2_lesson3: [String] = [
-    "Booleans are a special type of data in Python that represent the concept of true or false. They help us make decisions and perform logical operations in our programs.",
-    "In Python, we use the words \"True\" and \"False\" to represent booleans. Just like answering a yes or no question, a boolean can only have one of two possible values: true or false.",
-    "Whenever possible, it’s best to use a boolean because they can only take on two states.",
-    "Booleans will later be useful as a result of mathematical comparisons (<, >), and also to control the flow of logic in code.",
-    "QST: U2_L3_Q1"
-//mcq
-]
-
-let unit2_lesson4: [String] = [
     "Integers and floats are important types of numbers in the world of Python programming.",
     "Integers are whole numbers without any decimal points, while floats are numbers with decimal points.",
     "Integers are like the numbers we use for counting things, such as the number of apples in a basket or the age of a person. They can be positive numbers, negative numbers, or even zero.",
@@ -163,6 +174,16 @@ let unit2_lesson4: [String] = [
     "This means that sometimes the result of a calculation involving floats may have a slight rounding error.",
     "It's important to keep this in mind when working with precise calculations or financial data."
 ]
+
+let unit2_lesson4: [String] = [
+    "Booleans are a special type of data in Python that represent the concept of true or false. They help us make decisions and perform logical operations in our programs.",
+    "In Python, we use the words \"True\" and \"False\" to represent booleans. Just like answering a yes or no question, a boolean can only have one of two possible values: true or false.",
+    "Whenever possible, it’s best to use a boolean because they can only take on two states.",
+    "Booleans will later be useful as a result of mathematical comparisons (<, >), and also to control the flow of logic in code.",
+    "QST: U2_L3_Q1"
+//mcq
+]
+
 
 let unit2_lesson5: [String] = [
     "Type casting is a way to change the data type of a variable in Python.",
@@ -227,6 +248,8 @@ let unit3_lesson1: [String] = [
     "In this code, none of the preceding conditions are true, so the code inside the else block executes, printing \"You are neither 18 nor 13 years old!\"",
     "By using if, elif, and else statements, we can create programs that adapt and make decisions based on specific conditions.",
     "They allow our programs to respond differently to different situations, making them more versatile and interactive."
+    
+    //MCQ HERE
 ]
 
 let unit3_lesson2: [String] = [
@@ -251,6 +274,8 @@ let unit3_lesson2: [String] = [
     "Since 6 divided by 2 is 3 without any remainder, the if condition is true, and the code inside the if block executes, printing \"The number is even\".",
     "By using these mathematical comparisons and the modulo operator, we can perform various checks and make decisions in our programs based on numerical conditions.",
     "It allows us to create logic that responds to specific relationships between numbers, making our programs more powerful and versatile."
+    
+    //MCQ HERE
 ]
 
 let unit3_lesson3: [String] = [
@@ -280,6 +305,7 @@ let unit3_lesson3: [String] = [
     "Since “is_raining” is true, the code inside the if block executes, printing “There is stuff falling from the sky.”",
     "By using the \"and\" and \"or\" keywords, we can create more complex conditions in our if statements.",
     "These keywords allow us to control the flow of our programs based on multiple conditions, making our code more flexible and adaptable to different scenarios."
+    //MCQ HERE
 ]
 
 let unit4_lesson1: [String] = [
@@ -313,6 +339,8 @@ let unit4_lesson1: [String] = [
     "They are zero-indexed, allowing us to access specific items by their position.",
     "Lists are mutable, enabling us to modify their contents by assigning new values, adding items with append(), or removing items with remove().",
     "Using lists, we can organize and manipulate collections of data efficiently."
+    
+    //MCQ HERE
 ]
 
 let unit4_lesson2: [String] = [
@@ -339,6 +367,7 @@ let unit4_lesson2: [String] = [
     "print(sentence[-6:-1])  # Output: \"world\"",
     "In this code, `sentence[-6:-1]` slices the string from the sixth-to-last character to the second-to-last character (excluding the last one), giving us \"world\".",
     "Slicing is a powerful tool that allows you to extract specific parts of a string. It comes in handy when you need to access or manipulate different sections of text."
+    //MCQ HERE
 ]
 
 let unit4_lesson3: [String] = [
@@ -379,7 +408,6 @@ let unit5_lesson1: [String] = [
     "It allows us to traverse through the elements of a collection, access and manipulate data, and execute a set of instructions for each item.",
     "So, next time you encounter a situation where you have a group of items and need to perform a task on each one, remember that iteration is your friend.",
     "It helps you tackle repetitive tasks efficiently and unlocks the potential to solve complex problems with ease.",
-    "QST: U5_L1_Q1"
 ]
 
 let unit5_lesson2: [String] = [
@@ -459,7 +487,7 @@ let unit6_lesson2: [String] = [
     "By using functions, we can break down complex tasks into smaller, manageable pieces. Each function can have its own specific job, making our code easier to read, understand, and maintain.",
     "Remember, creating a function involves using the `def` keyword, providing a name, and defining its behavior with instructions.",
     "We can call the function to execute those instructions and even pass in arguments or receive return values to make our functions more flexible and powerful.",
-    "QST: U6_L1_Q1"
+    "QST: U6_L2_Q1"
 ]
 
 let unit6_lesson3: [String] = [
