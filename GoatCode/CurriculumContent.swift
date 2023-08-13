@@ -7,30 +7,29 @@
 
 import Foundation
 
-let lessonMapper: [Double: [String]] = [1.1: unit1_lesson0, 1.2: unit1_lesson1, 1.3: unit1_lesson2, 2.1: unit2_lesson0, 2.2: unit2_lesson1, 2.3: unit2_lesson3, 2.4: unit2_lesson3, 2.5: unit2_lesson4, 3.1: unit3_lesson1, 3.2: unit3_lesson2, 3.3: unit3_lesson3, 4.1: unit4_lesson1, 4.2: unit4_lesson2, 4.3: unit4_lesson3]
+let lessonMapper: [Double: [String]] = [1.1: unit1_lesson1, 1.2: unit1_lesson2, 1.3: unit1_lesson3, 2.1: unit2_lesson1, 2.2: unit2_lesson2, 2.3: unit2_lesson3, 2.4: unit2_lesson4, 2.5: unit2_lesson5, 3.1: unit3_lesson1, 3.2: unit3_lesson2, 3.3: unit3_lesson3, 4.1: unit4_lesson1, 4.2: unit4_lesson2, 4.3: unit4_lesson3]
 
-let questionMapper: [String: [String]] = ["U1_L0_Q1":U1_L0_Q1]
+let questionMapper: [String: [String]] = ["U2_L3_Q1":U2_L3_Q1]
 // To add an image, put image in "lessonPictures" and add it to array like this
 // "IMG: [name]",
 // make sure [name] is the name of pic
 
 //format for questions
 //question, choice1, choice2, choice3, choice4, answer
-let U1_L0_Q1: [String] = ["What is the capital of France?","Among us","Sus Sus", "Paris", "Baguette", "Paris"]
+let U2_L3_Q1: [String] = ["Create a boolean variable named 'hasGoats' and set its value as True.","hasGoats = True","hasGoats = False", "hasGoats = true", "hasGoats = “True”", "hasGoats = True"]
 
 
-let unit1_lesson0: [String] = [
+
+let unit1_lesson1: [String] = [
     "Welcome to GoatCode!",
     "Let’s get right into talking about code!",
     "Code is written in a file such as this",
-    "IMG: blockCode",
-    "QST: U1_L0_Q1",
     "It is generally read from top to bottom, and the computer will also read it from top to bottom.",
     "The language being taught in this curriculum is Python. Python is known for being simple and concise. In other words, each word holds a lot of power.",
     "Python also has an extensive online community. If you are ever lost on a question, feel free to do some online research."
 ]
 
-let unit1_lesson1: [String] = [
+let unit1_lesson2: [String] = [
     "Let’s start by making our code do something.",
     "The \"print\" function displays text on the user’s screen. A function is simply how a computer does actions.",
     "The syntax (how to write it) is as follows:",
@@ -40,7 +39,7 @@ let unit1_lesson1: [String] = [
     "print(\"Whatever you want to write\")"
 ]
 
-let unit1_lesson2: [String] = [
+let unit1_lesson3: [String] = [
     "Similarly to how the print function lets the code talk to us, there is a function that lets us talk to the code.",
     "It’s called the input function.",
     "However, the input function is different from the print function in one major way.",
@@ -54,7 +53,7 @@ let unit1_lesson2: [String] = [
     "On to chapter 2!"
 ]
 
-let unit2_lesson0: [String] = [
+let unit2_lesson1: [String] = [
     "Variables are like containers that hold information in the world of programming.",
     "They are like little boxes that you can use to store different kinds of stuff, such as numbers, words, or even the results of calculations.",
     "When we use variables, we give them names, just like we have names for people or pets.",
@@ -83,7 +82,7 @@ let unit2_lesson0: [String] = [
     "They are written by setting a name equal to a value."
 ]
 
-let unit2_lesson1: [String] = [
+let unit2_lesson2: [String] = [
     "Strings are an important part of programming and they help us work with text in Python.",
     "A string is a sequence of characters like letters, numbers, symbols, or even spaces.",
     "It's like a sentence or a word you use in your everyday conversations, but for the computer to understand.",
@@ -112,7 +111,16 @@ let unit2_lesson1: [String] = [
     "To summarize, strings are sequences of characters in Python that allow us to work with and manipulate text. We can take input into a string variable."
 ]
 
-let unit2_lesson2: [String] = [
+let unit2_lesson3: [String] = [
+    "Booleans are a special type of data in Python that represent the concept of true or false. They help us make decisions and perform logical operations in our programs.",
+    "In Python, we use the words \"True\" and \"False\" to represent booleans. Just like answering a yes or no question, a boolean can only have one of two possible values: true or false.",
+    "Whenever possible, it’s best to use a boolean because they can only take on two states.",
+    "Booleans will later be useful as a result of mathematical comparisons (<, >), and also to control the flow of logic in code.",
+    "QST: U2_L3_Q1"
+//mcq
+]
+
+let unit2_lesson4: [String] = [
     "Integers and floats are important types of numbers in the world of Python programming.",
     "Integers are whole numbers without any decimal points, while floats are numbers with decimal points.",
     "Integers are like the numbers we use for counting things, such as the number of apples in a basket or the age of a person. They can be positive numbers, negative numbers, or even zero.",
@@ -140,15 +148,7 @@ let unit2_lesson2: [String] = [
     "It's important to keep this in mind when working with precise calculations or financial data."
 ]
 
-let unit2_lesson3: [String] = [
-    "Booleans are a special type of data in Python that represent the concept of true or false. They help us make decisions and perform logical operations in our programs.",
-    "In Python, we use the words \"True\" and \"False\" to represent booleans. Just like answering a yes or no question, a boolean can only have one of two possible values: true or false.",
-    "Whenever possible, it’s best to use a boolean because they can only take on two states.",
-    "Booleans will later be useful as a result of mathematical comparisons (<, >), and also to control the flow of logic in code."
-//mcq
-]
-
-let unit2_lesson4: [String] = [
+let unit2_lesson5: [String] = [
     "Type casting is a way to change the data type of a variable in Python.",
     "It's like putting on different hats for a variable, allowing it to take on different forms depending on what we need it to be.",
     "Sometimes we need to convert a variable from one type to another, such as converting a number to a string or vice versa.",
