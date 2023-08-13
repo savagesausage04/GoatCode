@@ -7,59 +7,76 @@
 
 import SwiftUI
 
-import Foundation
+struct MultipleChoiceQuestionView: View {
+    let question: String
+    let options: [String]
+    let correctAnswer: String
+    @State private var selectedOption: String? = nil
+    @State private var showFeedback: Bool = false
 
-
-//let backgroundGradient = LinearGradient(
-    //colors: [Color.blue, Color.orange],
-    //startPoint: .top, endPoint: .bottom)
-
-
-let lightBrown = UIColor(named: "lightBrown")
-struct HomePage: View {
-    
-    @State var homePageTap = false
-    
     var body: some View {
-        ZStack {
-            // Use the color as background
-            Color("lightBrown")
-                .edgesIgnoringSafeArea(.all)  // Ignore safe area to fill entire screen
+        VStack(spacing: 20) {
+            // Question Text
+            Text(question)
+                .font(.headline)
             
-            // Content of the page
-                VStack {
-                    Spacer()  // Pushes content towards the center
-                    
-                    Image("goat")
-                        .resizable()
-                        .padding([.top, .leading, .trailing])
-                        .cornerRadius(10)
-                        .aspectRatio(contentMode: .fit)
-                    
-                    Text("GoatCode")
-                        .font(.largeTitle)
-                        .fontWeight(.light)
-                        .foregroundColor(Color.black)
-        
-                        
-                        
-                        Spacer()  // Pushes content towards the center
+            // Display options in a 2x2 grid
+            LazyVGrid(columns: [GridItem(.flexible(), spacing: 15), GridItem(.flexible(), spacing: 15)], spacing: 15) {
+                ForEach(options, id: \.self) { option in
+                    OptionButton(option: option,
+                                 isSelected: option == selectedOption) {
+                        selectedOption = option
                     }
-                
+                }
+            }
+            
+            // Check Answer button
+            Button(action: {
+                showFeedback = true
+            }) {
+                Text("Check Answer")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8.0)
+            }
+            .alert(isPresented: $showFeedback) {
+                if selectedOption == correctAnswer {
+                    return Alert(title: Text("Correct"), message: Text("That's the right answer!"), dismissButton: .default(Text("OK")))
+                } else {
+                    return Alert(title: Text("Wrong"), message: Text("Try again!"), dismissButton: .default(Text("OK")))
+                }
             }
         }
+        .padding()
     }
-    
-    
-    
-    
-    
-    struct HomePage_Previews: PreviewProvider {
-        static var previews: some View {
-            HomePage()
+}
+
+struct OptionButton: View {
+    let option: String
+    let isSelected: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Text(option)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(isSelected ? Color.blue : Color.gray)
+                .foregroundColor(.white)
+                .cornerRadius(8.0)
         }
-        
     }
+}
+
+struct MultipleChoiceQuestionView_Previews: PreviewProvider {
+    static var previews: some View {
+        MultipleChoiceQuestionView(question: "What's the capital of France?",
+                                   options: ["London", "Berlin", "Paris", "Madrid"],
+                                   correctAnswer: "Paris")
+    }
+}
+
     
 
 
