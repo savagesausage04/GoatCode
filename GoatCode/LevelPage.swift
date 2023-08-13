@@ -15,8 +15,6 @@ let unitNames = ["Intro to Python",
                 "Iteration",
                 "Functions",]
 
-
-
 struct LevelPage: View {
     @State private var messageIndex = 0
     
@@ -35,9 +33,33 @@ struct LevelPage: View {
     //    ]
     //
     var lessonCall: Double
-    
+    @AppStorage("completed") private var completedEncoded: Data = Data()
+
+    var completed: [Double] {
+        get {
+            if let decodedData = try? JSONDecoder().decode([Double].self, from: completedEncoded) {
+                return decodedData
+            }
+            return []
+        }
+        set {
+            if let encodedData = try? JSONEncoder().encode(newValue) {
+                completedEncoded = encodedData
+            }
+        }
+    }
+    @State private var newValue: Double = 0.0
+    func addNewValue() {
+        var mutableArray = completed
+        mutableArray.append(newValue)
+        if let encodedData = try? JSONEncoder().encode(mutableArray) {
+            completedEncoded = encodedData
+        }
+        newValue = 0.0
+    }
     
     var body: some View {
+
         let messages: [String] = lessonMapper[lessonCall]!
         ZStack {
             Color("lightBrown")
@@ -139,6 +161,10 @@ struct LevelPage: View {
                             if messageIndex < messages.count - 1 {
                                 messageIndex += 1
                             }
+                            if (messageIndex == messages.count - 1){
+                                newValue = lessonCall
+                                addNewValue()
+                            }
                         }
                     
                         .padding(.bottom, 30)
@@ -151,6 +177,9 @@ struct LevelPage: View {
     
     
 }
+
+
+
     
     
 struct LevelPage_Previews: PreviewProvider {

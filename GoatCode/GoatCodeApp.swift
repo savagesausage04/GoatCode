@@ -10,7 +10,6 @@ import SwiftUI
 @main
 
 struct GoatCodeApp: App {
-
     var body: some Scene {
         WindowGroup {
             UnitPage()
