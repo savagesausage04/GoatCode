@@ -78,7 +78,7 @@ struct LevelPage: View {
                 Text("\(lessonNames[unitsVal.firstIndex(where: { $0 == lessonCall })!])")
                     .font(.custom("minecraft", size:30))
                     .fontWeight(.semibold)
-                    .padding(.top, 15)
+                    .padding(.top, 1)
                     .padding(.horizontal, 10)
                     .frame(maxWidth: .infinity, alignment: .center)
                 
@@ -130,55 +130,97 @@ struct LevelPage: View {
                         .padding(.bottom, 20)
                     
                     Spacer()
+                    VStack{
+                        Spacer()
+                            .frame(height: 100)
+                        HStack{
+                            Image("chevron-back-outline")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 50.0)
+                                .onTapGesture {
+                                    if messageIndex > 0 {
+                                        messageIndex -= 1
+                                    }
+                                }
+                            
+                            Text("\(messageIndex + 1)/\(messages.count)")
+                                .font(.title2)
+                                .fontWeight(.medium)
+                                .foregroundColor(Color.black)
+                                .padding(.bottom, 10)
+                                .frame(width: 40)
+                            
+                            Image("chevron-forward-outline")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 50.0)
+                                .onTapGesture {
+                                    if messageIndex < messages.count - 1 {
+                                        messageIndex += 1
+                                    }
+                                    if (messageIndex == messages.count - 1){
+                                        newValue = lessonCall
+                                        addNewValue()
+                                    }
+                                }
+                            Spacer()
+                                .frame(width: 20)
+                        }
+                    }
                 }
                 
             }
             .padding(.horizontal, 10.0)
             
             // Buttons placement with message indicator
-            VStack {
-                Spacer()
+//            VStack {
+//                Spacer()
                 
                 // Message number indicator
                 // A little space from the buttons
                 
-                HStack {
-                    Spacer()
-                    
-                    Image("chevron-back-outline")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 50.0)
-                        .onTapGesture {
-                            if messageIndex > 0 {
-                                messageIndex -= 1
-                            }
-                        }
-                    
-                    Text("\(messageIndex + 1)/\(messages.count)")
-                        .font(.title2)
-                        .fontWeight(.medium)
-                        .foregroundColor(Color.black)
-                        .padding(.bottom, 10)
-                    
-                    Image("chevron-forward-outline")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 50.0)
-                        .onTapGesture {
-                            if messageIndex < messages.count - 1 {
-                                messageIndex += 1
-                            }
-                            if (messageIndex == messages.count - 1){
-                                newValue = lessonCall
-                                addNewValue()
-                            }
-                        }
-                    
-                        .padding(.bottom, 30)
-                        .padding(.trailing, 30)
-                }
-            }
+//                HStack {
+//                    Spacer()
+//
+//                    Image("chevron-back-outline")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 50.0)
+//                        .onTapGesture {
+//                            if messageIndex > 0 {
+//                                messageIndex -= 1
+//                            }
+//                        }
+//
+//                    Text("\(messageIndex + 1)/\(messages.count)")
+//                        .font(.title2)
+//                        .fontWeight(.medium)
+//                        .foregroundColor(Color.black)
+//                        .padding(.bottom, 10)
+//
+//                    Image("chevron-forward-outline")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 50.0)
+//                        .onTapGesture {
+//                            if messageIndex < messages.count - 1 {
+//                                messageIndex += 1
+//                            }
+//                            if (messageIndex == messages.count - 1){
+//                                newValue = lessonCall
+//                                addNewValue()
+//                            }
+//                        }
+//                    Spacer()
+//                        .frame(width: 5)
+//
+//                        .padding(.bottom, 30)
+//                        .padding(.trailing, 30)
+//                }
+//                Spacer()
+//                    .frame(height: 2.2)
+//            }
         }
     }
     

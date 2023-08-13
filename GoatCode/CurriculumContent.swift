@@ -107,7 +107,7 @@ let U3_L1_Q1: [String] = ["Given a string variable named “goatCheese”, print
                           "if(goatCheese == “Tasty”) {\nprint(“Correct”)\n}\nelse {\nprint(“Incorrect”)\n}"]
 
 let U3_L2_Q1: [String] = ["Given an integer variable named “numberOfGoats”, print out “Goats” if the variable is greater than 0, and print out “No goats” otherwise.",
-                          "if(numberOfGoats < 0) {\n	print(“Goats”)\n}\nelse {\n	print(“No goats”)\n}",
+                          "if(numberOfGoats < 0) {\nprint(“Goats”)\n}\nelse {\n print(“No goats”)\n}",
                           "if(numberOfGoats > 0) {\nprint(“Goats”)\n}\nelse {\nprint(“No goats”)\n}",
                           "if(numberOfGoats !=  0) {\nprint(“Goats”)\n}\nelse {\nprint(“No goats”)\n}",
                           "if(numberOfGoats >  0) {\nprint(“Goats”)\n}",
