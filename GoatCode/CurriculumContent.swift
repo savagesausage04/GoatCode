@@ -263,7 +263,7 @@ let unit2_lesson2: [String] = [
     "For example, \"hello\" and 'world' are both strings. The quotes tell Python that the characters inside should be treated as a string.",
     "Strings can contain not only words but also numbers and symbols.",
     "For instance, \"I am 10 years old\" is a string that includes words, numbers, and even spaces. We can even use special characters like exclamation marks (!) or question marks (?).",
-//MCQ ONEQOFQIOJWEIOFJWEOPFKWQOFJMQWOI
+    "QST: U2_L2_Q1",
     "Strings can also be combined or \"concatenated\" together using the plus (+) operator.",
     "Just like when we join different words to form a sentence, we can join different strings together in Python.",
     "For example, if we have the strings \"Hello\" and \"world\", we can concatenate them to get the string \"Hello world\".",
@@ -279,7 +279,7 @@ let unit2_lesson2: [String] = [
     "Then take their input.",
     "status = input()",
     "Now, we have saved their status to the “status” variable.",
-//MCQ TWO WQRFJMQIOFQWOILFJQEAIFJKKQWQWK
+    "QST: U2_L2_Q2",
     "To summarize, strings are sequences of characters in Python that allow us to work with and manipulate text. We can take input into a string variable."
 ]
 
@@ -293,7 +293,7 @@ let unit2_lesson3: [String] = [
     "age = 10",
     "Similarly, we can have a variable called \"temperature\" and assign it the value 65.5 to represent the temperature.",
     "temperature = 25.5",
-//MCQ 1PEOQJKFQMFKQWNFIWNEGVJKWEN
+    "QST: U2_L3_Q1",
     "We can perform various operations on integers and floats, such as addition, subtraction, multiplication, and division.",
     "For example, if we have the integers 5 and 3, we can add them together to get 8.",
     "numberOne = 5",
@@ -305,7 +305,7 @@ let unit2_lesson3: [String] = [
     "numberTwo = 1.5",
     "2.5 * 1.5 is equal to 3.75",
     "numberOne * numberTwo is equal to 3.75",
-//MCQ TWO WQOJFIQWFQIWJFNQWJKEFKKKDSFJKEFJEIDFCNDJFCN
+    "QST: U2_L3_Q2",
     "It's worth noting that floats have a limited precision due to how computers store and represent numbers.",
     "This means that sometimes the result of a calculation involving floats may have a slight rounding error.",
     "It's important to keep this in mind when working with precise calculations or financial data."
@@ -316,8 +316,7 @@ let unit2_lesson4: [String] = [
     "In Python, we use the words \"True\" and \"False\" to represent booleans. Just like answering a yes or no question, a boolean can only have one of two possible values: true or false.",
     "Whenever possible, it’s best to use a boolean because they can only take on two states.",
     "Booleans will later be useful as a result of mathematical comparisons (<, >), and also to control the flow of logic in code.",
-    "QST: U2_L3_Q1"
-//mcq
+    "QST: U2_L4_Q1"
 ]
 
 let unit2_lesson5: [String] = [
@@ -337,14 +336,14 @@ let unit2_lesson5: [String] = [
     "sum = int(num1) + int(num2)",
     "In this code, we convert the strings \"5\" and \"3\" to integers using the int() function.",
     "Then, we perform addition on the converted numbers and store the result in the variable sum.",
-//mcq1
+    "QST: U2_L5_Q1",
     "Type casting allows us to be flexible with our data and perform operations that are appropriate for the specific data types we are working with.",
     "It enables us to seamlessly switch between different types and use them as needed.",
     "However, it's important to note that not all type conversions are possible or make sense.",
     "For example, if we try to convert a string that doesn't represent a valid number to an integer, Python will raise an error.",
-    "So, it's essential to ensure that the data we are trying to convert can be successfully cast to the desired type."
-//mcq2
-]
+    "So, it's essential to ensure that the data we are trying to convert can be successfully cast to the desired type.",
+    "QST: U2_L5_Q2"
+    ]
 
 
 // ---------------------------- UNIT 3 ----------------------------
@@ -386,9 +385,8 @@ let unit3_lesson1: [String] = [
     "    print(\"You are neither 18 nor 13 years old!\")",
     "In this code, none of the preceding conditions are true, so the code inside the else block executes, printing \"You are neither 18 nor 13 years old!\"",
     "By using if, elif, and else statements, we can create programs that adapt and make decisions based on specific conditions.",
-    "They allow our programs to respond differently to different situations, making them more versatile and interactive."
-    
-    //MCQ HERE
+    "They allow our programs to respond differently to different situations, making them more versatile and interactive.",
+    "QST: U3_L1_Q1"
 ]
 
 let unit3_lesson2: [String] = [
@@ -412,9 +410,8 @@ let unit3_lesson2: [String] = [
     "In this code, the modulo operator checks if “num” divided by 2 leaves a remainder of 0.",
     "Since 6 divided by 2 is 3 without any remainder, the if condition is true, and the code inside the if block executes, printing \"The number is even\".",
     "By using these mathematical comparisons and the modulo operator, we can perform various checks and make decisions in our programs based on numerical conditions.",
-    "It allows us to create logic that responds to specific relationships between numbers, making our programs more powerful and versatile."
-    
-    //MCQ HERE
+    "It allows us to create logic that responds to specific relationships between numbers, making our programs more powerful and versatile.",
+    "QST: U3_L2_Q1"
 ]
 
 let unit3_lesson3: [String] = [
@@ -443,8 +440,8 @@ let unit3_lesson3: [String] = [
     "In this code, the if statement checks if either “is_raining” is true or “is_snowing” is true.",
     "Since “is_raining” is true, the code inside the if block executes, printing “There is stuff falling from the sky.”",
     "By using the \"and\" and \"or\" keywords, we can create more complex conditions in our if statements.",
-    "These keywords allow us to control the flow of our programs based on multiple conditions, making our code more flexible and adaptable to different scenarios."
-    //MCQ HERE
+    "These keywords allow us to control the flow of our programs based on multiple conditions, making our code more flexible and adaptable to different scenarios.",
+    "QST: U3_L3_Q1",
 ]
 
 
@@ -481,9 +478,8 @@ let unit4_lesson1: [String] = [
     "To summarize, lists in Python are versatile containers that can hold various types of data.",
     "They are zero-indexed, allowing us to access specific items by their position.",
     "Lists are mutable, enabling us to modify their contents by assigning new values, adding items with append(), or removing items with remove().",
-    "Using lists, we can organize and manipulate collections of data efficiently."
-    
-    //MCQ HERE
+    "Using lists, we can organize and manipulate collections of data efficiently.",
+    "QST: U4_L1_Q1",
 ]
 
 let unit4_lesson2: [String] = [
@@ -509,8 +505,8 @@ let unit4_lesson2: [String] = [
     "sentence = \"Hello, world!\"",
     "print(sentence[-6:-1])  # Output: \"world\"",
     "In this code, `sentence[-6:-1]` slices the string from the sixth-to-last character to the second-to-last character (excluding the last one), giving us \"world\".",
-    "Slicing is a powerful tool that allows you to extract specific parts of a string. It comes in handy when you need to access or manipulate different sections of text."
-    //MCQ HERE
+    "Slicing is a powerful tool that allows you to extract specific parts of a string. It comes in handy when you need to access or manipulate different sections of text.",
+    "QST: U4_L2_Q1",
 ]
 
 let unit4_lesson3: [String] = [

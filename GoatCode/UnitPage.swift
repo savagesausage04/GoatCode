@@ -10,6 +10,21 @@ import Foundation
 
 
 struct UnitPage: View {
+    @AppStorage("completed") private var completedEncoded: Data = Data()
+
+    var completed: [Double] {
+        get {
+            if let decodedData = try? JSONDecoder().decode([Double].self, from: completedEncoded) {
+                return decodedData
+            }
+            return []
+        }
+        set {
+            if let encodedData = try? JSONEncoder().encode(newValue) {
+                completedEncoded = encodedData
+            }
+        }
+    }
     @State var showHome = true
     
     var body: some View {
@@ -56,7 +71,7 @@ struct UnitPage: View {
                     ScrollView(showsIndicators: false) {
                         LazyVStack {
                             
-                            let xPositions: [CGFloat] = [50, 100, 20, -20, -10,
+                            let xPositions: [CGFloat] = [50, 80, 20, -20, -10,
                                                          60, 80, -20, -40, 30, 50, 0, 50, -40, 50, 0,-30, -60,
                                                          -20, 10, 80, 30, 20, -50]
                             
@@ -68,6 +83,13 @@ struct UnitPage: View {
                                              "Data Structures",
                                              "Iteration",
                                              "Functions",]
+                            let lessonNames = ["Brief intro","Hello World!","Taking Input",
+                                               "Intro to variables","Strings","Numbers","Booleans","Typecasting",
+                                               "Basic Logic","Comparisons","Combining conditionals",
+                                               "Lists","Slicing","Dictionaries",
+                                               "Iteration","While Loops","For Loops",
+                                               "I/O Refresher","Creating Functions","Standard Functions",
+                                                ]
                             
                             VStack(spacing: 40) {
                                 Spacer()
@@ -84,12 +106,19 @@ struct UnitPage: View {
                                         NavigationLink(destination: LevelPage(lessonCall: unitsVal[index])) {
                                             ZStack {
                                                 Circle()
-                                                    .fill(Color("lightBrown"))
-                                                    .frame(width: 100, height: 100)
-                                                
-                                                Text(String(unitsVal[index]))
-                                                    .font(.system(size: 24, weight: .bold, design: .rounded))
-                                                    .foregroundColor(.white)
+                                                    .fill(Color("lightBrown").opacity(completed.contains(unitsVal[index]) ? 0.5 : 1 ))
+                                                    .frame(width: 170, height: 170)
+                                                VStack{
+                                                    Text(String(unitsVal[index]))
+                                                        .font(.system(size: 42, weight: .bold, design: .rounded))
+                                                        .foregroundColor(.white)
+                                                        
+                                                    Text(String(lessonNames[index]))
+                                                        .font(.system(size: 22, weight: .bold, design: .rounded))
+                                                        .foregroundColor(.white)
+                                                        .frame(width: 140)
+                                                }
+                    
                                             }
                                             .rotationEffect(.degrees(180))
                                             
@@ -107,6 +136,9 @@ struct UnitPage: View {
                                     .aspectRatio(contentMode: .fit)
                                     .rotationEffect(.degrees(180))
                                     .background(Color.clear)
+                                    .onTapGesture{
+                                        
+                                    }
                                 
                             }
                             .background(Color.clear)
