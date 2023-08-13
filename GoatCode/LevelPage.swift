@@ -19,14 +19,21 @@ let unitNames = ["Intro to Python",
 
 struct LevelPage: View {
     @State private var messageIndex = 0
-//    let messages: [String] = [
-//        "this is message 1",
-//        "this is message 2",
-//        "this is message 3",
-//        "IMG: blockCode",
-//        "post image mortel"
-//    ]
-//
+    
+    let goatImg: [String] = [
+        "goat-talking",
+        "goat-talking",
+        "goat-talking",
+        "goat-inquisitive"
+    ]
+    //    let messages: [String] = [
+    //        "this is message 1",
+    //        "this is message 2",
+    //        "this is message 3",
+    //        "IMG: blockCode",
+    //        "post image mortel"
+    //    ]
+    //
     var lessonCall: Double
     
     
@@ -49,7 +56,7 @@ struct LevelPage: View {
                 
                 // Text above the "bubble" image
                 VStack{
-                   
+                    
                     if (messages[messageIndex].prefix(3) == "IMG")
                     {
                         Image(String(messages[messageIndex].dropFirst(5)))
@@ -57,13 +64,13 @@ struct LevelPage: View {
                             .padding([.top, .leading, .trailing])
                             .cornerRadius(10)
                             .aspectRatio(contentMode: .fit)
-                            //.rotationEffect(.degrees(180))
+                        //.rotationEffect(.degrees(180))
                     }
                     else if (messages[messageIndex].prefix(3) == "QST")
                     {
                         let qArr: [String] = questionMapper[String(messages[messageIndex].dropFirst(5))]!
                         MultipleChoiceQuestionView(question: qArr[0], options: [qArr[1],qArr[2],qArr[3],qArr[4]],correctAnswer:qArr[5])
-                            //.rotationEffect(.degrees(180))
+                        //.rotationEffect(.degrees(180))
                     }
                     else
                     {
@@ -71,38 +78,39 @@ struct LevelPage: View {
                             .font(.title2)
                     }
                 }
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
-                    .overlay(alignment: .bottomLeading) {
-                        Image(systemName: "arrowtriangle.down.fill")
-                            .font(.largeTitle)
-                            .rotationEffect(.degrees(30))
-                            .offset(x: 10, y: 20)
-                            .foregroundColor(.white)
-                    }
-                    .padding(.bottom, 30)
-
-                // Stationary "bubble" image anchored to the left
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
+                .overlay(alignment: .bottomLeading) {
+                    Image(systemName: "arrowtriangle.down.fill")
+                        .font(.largeTitle)
+                        .rotationEffect(.degrees(30))
+                        .offset(x: 200, y: 20)
+                        .foregroundColor(.white)
+                }
+                .padding(.bottom, 30)
+                
+                // Goat PNG
                 HStack {
-                    Image("bubble")
+                    Image(goatImg[Int.random(in: 0..<4)])
                         .resizable()
-                        .frame(width: 175.0, height: 175.0)
+                        .frame(width: 225.0, height: 225.0)
                         .padding(.horizontal)
                         .padding(.bottom, 20)
-
+                    
                     Spacer()
                 }
+                
             }
             .padding(.horizontal, 10.0)
-
+            
             // Buttons placement with message indicator
             VStack {
                 Spacer()
                 
                 // Message number indicator
-                  // A little space from the buttons
+                // A little space from the buttons
                 
                 HStack {
                     Spacer()
@@ -132,17 +140,17 @@ struct LevelPage: View {
                                 messageIndex += 1
                             }
                         }
+                    
+                        .padding(.bottom, 30)
+                        .padding(.trailing, 30)
                 }
-                .padding(.bottom, 30)
-                .padding(.trailing, 30)
             }
         }
     }
+    
+    
+    
 }
-
-
-
-
     
     
 struct LevelPage_Previews: PreviewProvider {
