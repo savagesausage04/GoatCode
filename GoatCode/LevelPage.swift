@@ -15,6 +15,14 @@ let unitNames = ["Intro to Python",
                 "Iteration",
                 "Functions",]
 
+let lessonNames = ["Brief intro","Hello World!","Taking Input",
+                   "Intro to variables","Strings","Numbers","Booleans","Typecasting",
+                   "Basic Logic","Comparisons","Combining conditionals",
+                   "Lists","Slicing","Dictionaries",
+                   "Iteration","While Loops","For Loops",
+                   "I/O Refresher","Creating Functions","Standard Functions",
+                    ]
+
 struct LevelPage: View {
     @State var messageIndex = 0
 
@@ -61,7 +69,7 @@ struct LevelPage: View {
             
             VStack {
                 // Title at top center
-                Text("\(unitNames[Int(lessonCall)-1])")
+                Text("\(lessonNames[unitsVal.firstIndex(where: { $0 == lessonCall })!])")
                     .font(.custom("minecraft", size:30))
                     .fontWeight(.semibold)
                     .padding(.top, 15)

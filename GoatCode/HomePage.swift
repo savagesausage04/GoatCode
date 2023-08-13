@@ -47,6 +47,7 @@ struct MultipleChoiceQuestionView: View {
                 }
                 .alert(isPresented: $showFeedback) {
                     if selectedOption == correctAnswer {
+
                         return Alert(title: Text("Correct"), message: Text("That's the right answer!"), dismissButton: .default(Text("OK")))
                     } else {
                         return Alert(title: Text("Wrong"), message: Text("Try again!"), dismissButton: .default(Text("OK")))

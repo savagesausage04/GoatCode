@@ -11,6 +11,8 @@ import Foundation
 
 struct UnitPage: View {
     @AppStorage("completed") private var completedEncoded: Data = Data()
+    
+    @State private var goatRotationAngle: Double = 0.0
 
     var completed: [Double] {
         get {
@@ -135,9 +137,11 @@ struct UnitPage: View {
                                     .cornerRadius(10)
                                     .aspectRatio(contentMode: .fit)
                                     .rotationEffect(.degrees(180))
-                                    .background(Color.clear)
-                                    .onTapGesture{
-                                        
+                                    .rotationEffect(.degrees(goatRotationAngle))
+                                    .onTapGesture {
+                                        withAnimation(.easeInOut(duration: 3.0)) {
+                                            goatRotationAngle += 360 // Rotate by 360 degrees
+                                        }
                                     }
                                 
                             }
