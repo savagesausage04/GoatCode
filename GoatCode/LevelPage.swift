@@ -6,8 +6,14 @@
 //
 import SwiftUI
 import Foundation
-
-
+let unitsVal: [Double] = [1.1, 1.2, 1.3, 2.1, 2.2, 2.3, 2.4, 2.5, 3.1, 3.2,
+                           3.3, 4.1, 4.2, 4.3, 5.1, 5.2, 5.3, 6.1, 6.2, 6.3,]
+let unitNames = ["Intro to Python",
+                "Variables & Operations",
+                "Logic",
+                "Data Structures",
+                "Iteration",
+                "Functions",]
 
 
 
@@ -16,7 +22,9 @@ struct LevelPage: View {
     let messages: [String] = [
         "this is message 1",
         "this is message 2",
-        "this is message 3"
+        "this is message 3",
+        "IMG: blockCode",
+        "post image mortel"
     ]
     
     var lessonCall: Double
@@ -29,18 +37,33 @@ struct LevelPage: View {
             
             VStack {
                 // Title at top center
-                Text("Intro to Loops")
+                Text("\(unitNames[Int(lessonCall)-1])")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
-                    .padding(.top, 30)
-                    .padding(.horizontal)
+                    .padding(.top, 15)
+                    .padding(.horizontal, 10)
                     .frame(maxWidth: .infinity, alignment: .center)
                 
                 Spacer()
                 
                 // Text above the "bubble" image
-                Text(messages[messageIndex])
-                    .font(.title2)
+                VStack{
+                   
+                    if (messages[messageIndex].prefix(3) == "IMG")
+                    {
+                        Image(String(messages[messageIndex].dropFirst(5)))
+                            .resizable()
+                            .padding([.top, .leading, .trailing])
+                            .cornerRadius(10)
+                            .aspectRatio(contentMode: .fit)
+                            //.rotationEffect(.degrees(180))
+                    }
+                    else
+                    {
+                        Text(messages[messageIndex])
+                            .font(.title2)
+                    }
+                }
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.white)
@@ -53,7 +76,7 @@ struct LevelPage: View {
                             .foregroundColor(.white)
                     }
                     .padding(.bottom, 30)
-                
+
                 // Stationary "bubble" image anchored to the left
                 HStack {
                     Image("bubble")

@@ -7,13 +7,18 @@
 
 import Foundation
 
-let myDictionary: [Double: [String]] = [1.0: unit1_lesson0, 1.1: unit1_lesson1, 1.2: unit1_lesson2]
 
+let lessonMapper: [Double: [String]] = [1.0: unit1_lesson0, 1.1: unit1_lesson1, 1.2: unit1_lesson2]
+
+// To add an image, put image in "lessonPictures" and add it to array like this
+// "IMG: [name]",
+// make sure [name] is the name of pic
 
 let unit1_lesson0: [String] = [
     "Welcome to GoatCode!",
     "Let’s get right into talking about code!",
-    "Code is written in a file such as this (image of coding file)",
+    "Code is written in a file such as this",
+    "IMG: blockCode",
     "It is generally read from top to bottom, and the computer will also read it from top to bottom.",
     "The language being taught in this curriculum is Python. Python is known for being simple and concise. In other words, each word holds a lot of power.",
     "Python also has an extensive online community. If you are ever lost on a question, feel free to do some online research."
