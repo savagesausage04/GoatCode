@@ -18,6 +18,7 @@
 		149689412A579414000A8E4F /* LevelPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149689402A579414000A8E4F /* LevelPage.swift */; };
 		457079112A8841AB0093EA5C /* CurriculumContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457079102A8841AB0093EA5C /* CurriculumContent.swift */; };
 		457079132A8843790093EA5C /* LessonPictures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457079122A8843790093EA5C /* LessonPictures.xcassets */; };
+		4570791A2A88C91F0093EA5C /* minecraft_font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 457079192A88C9120093EA5C /* minecraft_font.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		149689402A579414000A8E4F /* LevelPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPage.swift; sourceTree = "<group>"; };
 		457079102A8841AB0093EA5C /* CurriculumContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumContent.swift; sourceTree = "<group>"; };
 		457079122A8843790093EA5C /* LessonPictures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LessonPictures.xcassets; sourceTree = "<group>"; };
+		457079192A88C9120093EA5C /* minecraft_font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = minecraft_font.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				457079102A8841AB0093EA5C /* CurriculumContent.swift */,
 				457079122A8843790093EA5C /* LessonPictures.xcassets */,
 				1460EF292A37ADDF008A0847 /* Assets.xcassets */,
+				457079192A88C9120093EA5C /* minecraft_font.ttf */,
 				1460EF2B2A37ADDF008A0847 /* Preview Content */,
 			);
 			path = GoatCode;
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1460EF2D2A37ADDF008A0847 /* Preview Assets.xcassets in Resources */,
+				4570791A2A88C91F0093EA5C /* minecraft_font.ttf in Resources */,
 				457079132A8843790093EA5C /* LessonPictures.xcassets in Resources */,
 				1460EF2A2A37ADDF008A0847 /* Assets.xcassets in Resources */,
 			);
@@ -435,6 +439,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GoatCode/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GoatCode/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -464,6 +469,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"GoatCode/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GoatCode/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

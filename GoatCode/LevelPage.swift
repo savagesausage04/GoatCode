@@ -39,7 +39,7 @@ struct LevelPage: View {
             VStack {
                 // Title at top center
                 Text("\(unitNames[Int(lessonCall)-1])")
-                    .font(.largeTitle)
+                    .font(.custom("minecraft", size:30))
                     .fontWeight(.semibold)
                     .padding(.top, 15)
                     .padding(.horizontal, 10)

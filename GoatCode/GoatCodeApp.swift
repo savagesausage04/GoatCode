@@ -15,6 +15,7 @@ struct GoatCodeApp: App {
         WindowGroup {
             UnitPage()
             
+            
         }
     }
 }

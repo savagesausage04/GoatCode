@@ -79,7 +79,7 @@ struct UnitPage: View {
                                     }
                                     
                                     Button(action: {
-                                        print("Button \(index + 1) tapped!")
+
                                     }) {
                                         NavigationLink(destination: LevelPage(lessonCall: unitsVal[index])) {
                                             ZStack {

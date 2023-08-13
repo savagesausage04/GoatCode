@@ -7,59 +7,191 @@
 
 import Foundation
 
-let lessonMapper: [Double: [String]] = [1.1: unit1_lesson1, 1.2: unit1_lesson2, 1.3: unit1_lesson3, 2.1: unit2_lesson1, 2.2: unit2_lesson2, 2.3: unit2_lesson3, 2.4: unit2_lesson4, 2.5: unit2_lesson5, 3.1: unit3_lesson1, 3.2: unit3_lesson2, 3.3: unit3_lesson3, 4.1: unit4_lesson1, 4.2: unit4_lesson2, 4.3: unit4_lesson3]
+let lessonMapper: [Double: [String]] = [1.1: unit1_lesson1, 1.2: unit1_lesson2, 1.3: unit1_lesson3,
+                                        2.1: unit2_lesson1, 2.2: unit2_lesson2, 2.3: unit2_lesson3, 2.4: unit2_lesson4, 2.5: unit2_lesson5,
+                                        3.1: unit3_lesson1, 3.2: unit3_lesson2, 3.3: unit3_lesson3,
+                                        4.1: unit4_lesson1, 4.2: unit4_lesson2, 4.3: unit4_lesson3,
+                                        5.1: unit5_lesson1, 5.2: unit5_lesson2, 5.3: unit5_lesson3,
+                                        6.1: unit6_lesson1, 6.2: unit6_lesson2, 6.3: unit6_lesson3,
+                                        ]
 
 
-let questionMapper: [String: [String]] = ["U2_L2_Q1": U2_L2_Q1, //done
-                                          "U2_L2_Q2": U2_L2_Q2, //done
-                                          "U2_L3_Q1": U2_L3_Q1, //done
-                                          "U2_L3_Q2": U2_L3_Q2, //done
+let questionMapper: [String: [String]] = ["U2_L2_Q1": U2_L2_Q1, "U2_L2_Q2": U2_L2_Q2,
+                                          "U2_L3_Q1": U2_L3_Q1, "U2_L3_Q2": U2_L3_Q2,
                                           "U2_L4_Q1": U2_L4_Q1,
-                                          "U2_L5_Q1": U2_L5_Q1,
-                                          "U2_L5_Q2": U2_L5_Q2,
+                                          "U2_L5_Q1": U2_L5_Q1, "U2_L5_Q2": U2_L5_Q2,
+                                          
                                           "U3_L1_Q1": U3_L1_Q1,
                                           "U3_L2_Q1": U3_L2_Q1,
                                           "U3_L3_Q1": U3_L3_Q1,
+                                          
                                           "U4_L1_Q1": U4_L1_Q1,
                                           "U4_L2_Q1": U4_L2_Q1,
-                                          "U4_L3_Q1": U4_L3_Q1, //done
-                                          "U5_L2_Q1": U5_L2_Q1, //done
-                                          "U5_L3_Q1": U5_L3_Q1, //done
-                                          "U6_L2_Q1": U6_L2_Q1, //done
-                                          "U6_L3_Q1": U6_L3_Q1  //done
+                                          "U4_L3_Q1": U4_L3_Q1,
+                                          
+                                          "U5_L2_Q1": U5_L2_Q1,
+                                          "U5_L3_Q1": U5_L3_Q1,
+                                          "U6_L2_Q1": U6_L2_Q1,
+                                          "U6_L3_Q1": U6_L3_Q1,
                                           ]
 // To add an image, put image in "lessonPictures" and add it to array like this
 // "IMG: [name]",
 // make sure [name] is the name of pic
 
+// *********************** QUESTION CONTENT ***********************
+
 //format for questions
-//question, choice1, choice2, choice3, choice4, answer
-let U2_L2_Q1: [String] =
-let U2_L2_Q2: [String] =
-let U2_L3_Q1: [String] = ["Make an integer variable named “goats” and set it equal to 5.","goats = 5","goats = “5”", "goats = five", "goats = 5.0", "goats = 5"]
-let U2_L3_Q2: [String] = ["Bob and Alice are two goat farmers that want to combine their goats into one herd. However, they hate doing math, and want to make a computer do it for them. If there is a predefined integer ‘bobsGoats’ and another predefined integer ‘alicesGoats’, create a variable ‘totalGoats’ and set it equal to the total.","totalGoats = bobsGoats - alicesGoats","bobsGoats + alicesGoats = totalGoats", "totalGoats = alicesGoats, bobsGoats", "totalGoats = bobsGoats + alicesGoats", "totalGoats = bobsGoats + alicesGoats"]
-let U2_L4_Q1: [String] = ["Create a boolean variable named “hasGoats” and set its value as True.","hasGoats = True","hasGoats = False", "hasGoats = true", "hasGoats = “True”", "hasGoats = True"]
-let U2_L5_Q1: [String] = ["Given a pre-existing integer variable named “goatsNum”, create a new string named “goatsString” and give it the value of “goatsNum” as a string.","goatsString = str(goatsNum)","goatsString = int(goatsNum)", "goatsString = str(goatsString)", "goatsString = goatsNum", "goatsString = str(goatsNum)"]
-let U2_L5_Q2: [String] = ["Given the following variables, which of the following will raise an error?\nvar1 = 3\nvar2 = “goatStew”\nvar3 = “5”","var4 = var1 + int(var3)","var4 = var1 + var3", "var4 = str(var1)", "var4 = str(var1) + var2", "var4 = var1 + var3"]
-let U3_L1_Q1: [String] = ["Given a string variable named “goatCheese”, print “Correct” if the variable is equal to “Tasty”, and print “Incorrect” if the variable is not equal to “Tasty”.","if(goatCheese = “Tasty”) {\nprint(“Correct”)\n}\nelse {\nprint(“Incorrect”)\n}","if(goatCheese == “Tasty”) {\nprint(“Correct”)\n}\nelse {\nprint(“Incorrect”)\n}", "if(goatCheese == “Tasty”) {\nprint(“Incorrect”)\n}\nelse {\nprint(“Correct”)\n}", "if(goatCheese == “Tasty”) {\nprint(“Correct”)\n}", "if(goatCheese == “Tasty”) {\nprint(“Correct”)\n}\nelse {\nprint(“Incorrect”)\n}"]
-let U3_L2_Q1: [String] = ["Given an integer variable named “numberOfGoats”, print out “Goats” if the variable is greater than 0, and print out “No goats” otherwise.","if(numberOfGoats < 0) {\nprint(“Goats”)\n}\nelse {\nprint(“No goats”)\n}","if(numberOfGoats > 0) {\nprint(“Goats”)\n}\nelse {\nprint(“No goats”)\n}", "if(numberOfGoats !=  0) {\nprint(“Goats”)\n}\nelse {\nprint(“No goats”)\n}", "if(numberOfGoats >  0) {\nprint(“Goats”)\n}", "if(numberOfGoats > 0) {\nprint(“Goats”)\n}\nelse {\nprint(“No goats”)\n}"]
-let U3_L3_Q1: [String] = ["Given a boolean variable named “eatsGrass” and another boolean variable named “climbsMountains”, print “Probably a goat” if both are true, and print “Probably not a goat” otherwise.","if(climbsMountains and eatsGrass) {\nprint(“Probably a goat”)\n}\nelse {\nprint(“Probably not a goat”)\n}","if(climbsMountains or eatsGrass) {\nprint(“Probably a goat”)\n}\nelse {\nprint(“Probably not a goat”)\n}", "if(climbsMountains and eatsGrass) {\nprint(“Probably a goat”)\n}", "if(climbsMountains or eatsGrass) {\nprint(“Probably a goat”)\n}", "if(climbsMountains and eatsGrass) {\nprint(“Probably a goat”)\n}\nelse {\nprint(“Probably not a goat”)\n}"]
-let U4_L1_Q1: [String] = [" Make a list named “whatGoatsEat”. Add three things to the list in this order: “grass”, “grains”, “hay”","whatGoatsEat = ()\nwhatGoatsEat.append(“grass”)\nwhatGoatsEat.append(“grains”)\nwhatGoatsEat.append(“hay”)","whatGoatsEat = []\nwhatGoatsEat.add(“grass”)\nwhatGoatsEat.add(“grains”)\nwhatGoatsEat.add(“hay”)", "whatGoatsEat.append(“grass”)\nwhatGoatsEat.append(“grains”)\nwhatGoatsEat.append(“hay”)", "whatGoatsEat = []\nwhatGoatsEat.append(“grass”)\nwhatGoatsEat.append(“grains”)\nwhatGoatsEat.append(“hay”)", "whatGoatsEat = []\nwhatGoatsEat.append(“grass”)\nwhatGoatsEat.append(“grains”)\nwhatGoatsEat.append(“hay”)"]
-let U4_L2_Q1: [String] = ["You have been given a string variable named “fakeNews”, which contains the string “goatsSuck”. Create a new variable named “trueNews”,  and using slicing, set it equal to the first five letters of the “fakeNews” variable. In other words, slice the word “goats” out of the fakeNews variable, and put it in trueNews.","trueNews = fakeNews(:4)","trueNews = fakeNews[:5]", "trueNews = fakeNews[:4]", "trueNews = fakeNews", "trueNews = fakeNews[:5]"]
-let U4_L3_Q1: [String] = ["Make a dictionary named “goat”. Add a key-value pair to “goat” that maps the key “food” to the value “grass”.","goat = {}\ngoat[“food”] = “grass”","goat = goat{}\ngoat[“food”] = “grass”", "goat = ()\ngoat(“food”) = “grass”", "goat = {}\ngoat[food] = grass", "goat = {}\ngoat[“food”] = “grass”"]
-let U5_L2_Q1: [String] = ["Write a countdown that counts up from 1 to 10 (including 1 and 10).","counter = 1\nwhile counter <= 10:\nprint(counter)\ncounter = counter + 1","counter = 1\nwhile counter <= 10:\ncounter = counter + 1\nprint(counter)", "while counter <= 10:\ncounter = counter + 1\nprint(counter)", "while counter <= 10:\nprint(counter)\ncounter = counter + 1", "counter = 1\nwhile counter <= 10:\nprint(counter)\ncounter = counter + 1"]
-let U5_L3_Q1: [String] = ["Given a list named “goatNames”, print every item in the list.","for name in goatNames:\nprint(name)","for each name in goatNames:\nprint(name)", "for name in goatNames:\nprint(“name”)", "for each name in goatNames:\nprint(“name”)", "for name in goatNames:\nprint(name)"]
-let U6_L2_Q1: [String] = ["Create a function named “goatFood” that prints “The goat ate [PARAMETER] today”, where the [PARAMETER] is specified by calling the function.","def goatFood(param):\nprint(“The goat ate “ + param + “ today”","def goatFood(param):\nprint(“The goat ate param today”)", "def goatFood(param):\nprint(“The goat ate “ + param + “ today”)", "def goatFood(param):\nprint(The goat ate “param” today)", "def goatFood(param):\nprint(“The goat ate “ + param + “ today”)"]
-let U6_L3_Q1: [String] = ["Given a list named “coolList”, print its length.","len(print(coolList))","print(len(coolList))", "print(“len(coolList)”)", "print(coolList.len())", "print(len(coolList))"]
+//[question, choice1, choice2, choice3, choice4, answer]
 
 
+// ---------------------------- UNIT 2 ----------------------------
 
+
+let U2_L2_Q1: [String] = ["Make a string variable named “food” and set it equal to “grass”.",
+                          "food = “grass”",
+                          "food = grass",
+                          "String food = “grass”",
+                          "grass is food",
+                          "food = “grass”",]
+
+let U2_L2_Q2: [String] = ["Take input from the user and save it to a variable named “favoriteGoat”. You do not have to print anything, just take the input.",
+                          "favoriteGoat = input",
+                          "favoriteGoat = “input”",
+                          "input() = favoriteGoat",
+                          "favoriteGoat = input()",
+                          "favoriteGoat = input()"]
+
+let U2_L3_Q1: [String] = ["Make an integer variable named “goats” and set it equal to 5.",
+                          "goats = 5",
+                          "goats = “5”",
+                          "goats = five",
+                          "goats = 5.0", "goats = 5"]
+
+let U2_L3_Q2: [String] = ["Bob and Alice are two goat farmers that want to combine their goats into one herd. However, they hate doing math, and want to make a computer do it for them. If there is a predefined integer ‘bobsGoats’ and another predefined integer ‘alicesGoats’, create a variable ‘totalGoats’ and set it equal to the total.",
+                          "totalGoats = bobsGoats - alicesGoats",
+                          "bobsGoats + alicesGoats = totalGoats",
+                          "totalGoats = alicesGoats, bobsGoats",
+                          "totalGoats = bobsGoats + alicesGoats",
+                          "totalGoats = bobsGoats + alicesGoats"]
+
+let U2_L4_Q1: [String] = ["Create a boolean variable named “hasGoats” and set its value as True.",
+                          "hasGoats = True",
+                          "hasGoats = False",
+                          "hasGoats = true",
+                          "hasGoats = “True”",
+                          "hasGoats = True"]
+
+let U2_L5_Q1: [String] = ["Given a pre-existing integer variable named “goatsNum”, create a new string named “goatsString” and give it the value of “goatsNum” as a string.",
+                          "goatsString = str(goatsNum)",
+                          "goatsString = int(goatsNum)",
+                          "goatsString = str(goatsString)",
+                          "goatsString = goatsNum",
+                          "goatsString = str(goatsNum)"]
+
+let U2_L5_Q2: [String] = ["Given the following variables, which of the following will raise an error?\nvar1 = 3\nvar2 = “goatStew”\nvar3 = “5”",
+                          "var4 = var1 + int(var3)",
+                          "var4 = var1 + var3",
+                          "var4 = str(var1)",
+                          "var4 = str(var1) + var2",
+                          "var4 = var1 + var3"]
+
+
+// ---------------------------- UNIT 3 ----------------------------
+
+
+let U3_L1_Q1: [String] = ["Given a string variable named “goatCheese”, print “Correct” if the variable is equal to “Tasty”, and print “Incorrect” if the variable is not equal to “Tasty”.",
+                          "if(goatCheese = “Tasty”) {\nprint(“Correct”)\n}\nelse {\nprint(“Incorrect”)\n}",
+                          "if(goatCheese == “Tasty”) {\nprint(“Correct”)\n}\nelse {\nprint(“Incorrect”)\n}",
+                          "if(goatCheese == “Tasty”) {\nprint(“Incorrect”)\n}\nelse {\nprint(“Correct”)\n}",
+                          "if(goatCheese == “Tasty”) {\nprint(“Correct”)\n}",
+                          "if(goatCheese == “Tasty”) {\nprint(“Correct”)\n}\nelse {\nprint(“Incorrect”)\n}"]
+
+let U3_L2_Q1: [String] = ["Given an integer variable named “numberOfGoats”, print out “Goats” if the variable is greater than 0, and print out “No goats” otherwise.",
+                          "if(numberOfGoats < 0) {\nprint(“Goats”)\n}\nelse {\nprint(“No goats”)\n}",
+                          "if(numberOfGoats > 0) {\nprint(“Goats”)\n}\nelse {\nprint(“No goats”)\n}",
+                          "if(numberOfGoats !=  0) {\nprint(“Goats”)\n}\nelse {\nprint(“No goats”)\n}",
+                          "if(numberOfGoats >  0) {\nprint(“Goats”)\n}",
+                          "if(numberOfGoats > 0) {\nprint(“Goats”)\n}\nelse {\nprint(“No goats”)\n}"]
+
+let U3_L3_Q1: [String] = ["Given a boolean variable named “eatsGrass” and another boolean variable named “climbsMountains”, print “Probably a goat” if both are true, and print “Probably not a goat” otherwise.",
+                          "if(climbsMountains and eatsGrass) {\nprint(“Probably a goat”)\n}\nelse {\nprint(“Probably not a goat”)\n}",
+                          "if(climbsMountains or eatsGrass) {\nprint(“Probably a goat”)\n}\nelse {\nprint(“Probably not a goat”)\n}",
+                          "if(climbsMountains and eatsGrass) {\nprint(“Probably a goat”)\n}",
+                          "if(climbsMountains or eatsGrass) {\nprint(“Probably a goat”)\n}",
+                          "if(climbsMountains and eatsGrass) {\nprint(“Probably a goat”)\n}\nelse {\nprint(“Probably not a goat”)\n}"]
+
+
+// ---------------------------- UNIT 4 ----------------------------
+
+
+let U4_L1_Q1: [String] = [" Make a list named “whatGoatsEat”. Add three things to the list in this order: “grass”, “grains”, “hay”",
+                          "whatGoatsEat = ()\nwhatGoatsEat.append(“grass”)\nwhatGoatsEat.append(“grains”)\nwhatGoatsEat.append(“hay”)",
+                          "whatGoatsEat = []\nwhatGoatsEat.add(“grass”)\nwhatGoatsEat.add(“grains”)\nwhatGoatsEat.add(“hay”)",
+                          "whatGoatsEat.append(“grass”)\nwhatGoatsEat.append(“grains”)\nwhatGoatsEat.append(“hay”)",
+                          "whatGoatsEat = []\nwhatGoatsEat.append(“grass”)\nwhatGoatsEat.append(“grains”)\nwhatGoatsEat.append(“hay”)",
+                          "whatGoatsEat = []\nwhatGoatsEat.append(“grass”)\nwhatGoatsEat.append(“grains”)\nwhatGoatsEat.append(“hay”)"]
+
+let U4_L2_Q1: [String] = ["You have been given a string variable named “fakeNews”, which contains the string “goatsSuck”. Create a new variable named “trueNews”,  and using slicing, set it equal to the first five letters of the “fakeNews” variable. In other words, slice the word “goats” out of the fakeNews variable, and put it in trueNews.",
+                          "trueNews = fakeNews(:4)",
+                          "trueNews = fakeNews[:5]",
+                          "trueNews = fakeNews[:4]",
+                          "trueNews = fakeNews",
+                          "trueNews = fakeNews[:5]"]
+
+let U4_L3_Q1: [String] = ["Make a dictionary named “goat”. Add a key-value pair to “goat” that maps the key “food” to the value “grass”.",
+                          "goat = {}\ngoat[“food”] = “grass”",
+                          "goat = goat{}\ngoat[“food”] = “grass”",
+                          "goat = ()\ngoat(“food”) = “grass”",
+                          "goat = {}\ngoat[food] = grass",
+                          "goat = {}\ngoat[“food”] = “grass”"]
+
+
+// ---------------------------- UNIT 5 ----------------------------
+
+
+let U5_L2_Q1: [String] = ["Write a countdown that counts up from 1 to 10 (including 1 and 10).",
+                          "counter = 1\nwhile counter <= 10:\n    print(counter)\n    counter = counter + 1",
+                          "counter = 1\nwhile counter <= 10:\n    counter = counter + 1\n    print(counter)",
+                          "while counter <= 10:\n    counter = counter + 1\n    print(counter)",
+                          "while counter <= 10:\n    print(counter)\n    counter = counter + 1",
+                          "counter = 1\nwhile counter <= 10:\n    print(counter)\n    counter = counter + 1"]
+
+let U5_L3_Q1: [String] = ["Given a list named “goatNames”, print every item in the list.",
+                          "for name in goatNames:\nprint(name)",
+                          "for each name in goatNames:\nprint(name)",
+                          "for name in goatNames:\nprint(“name”)",
+                          "for each name in goatNames:\nprint(“name”)",
+                          "for name in goatNames:\nprint(name)"]
+
+
+// ---------------------------- UNIT 6 ----------------------------
+
+
+let U6_L2_Q1: [String] = ["Create a function named “goatFood” that prints “The goat ate [PARAMETER] today”, where the [PARAMETER] is specified by calling the function.",
+                          "def goatFood(param):\nprint(“The goat ate “ + param + “ today”",
+                          "def goatFood(param):\nprint(“The goat ate param today”)",
+                          "def goatFood(param):\nprint(“The goat ate “ + param + “ today”)",
+                          "def goatFood(param):\nprint(The goat ate “param” today)",
+                          "def goatFood(param):\nprint(“The goat ate “ + param + “ today”)"]
+
+let U6_L3_Q1: [String] = ["Given a list named “coolList”, print its length.",
+                          "len(print(coolList))",
+                          "print(len(coolList))",
+                          "print(“len(coolList)”)",
+                          "print(coolList.len())",
+                          "print(len(coolList))"]
+
+
+// ********************** CURRICULUM CONTENT **********************
+
+// ---------------------------- UNIT 1 ----------------------------
 
 
 let unit1_lesson1: [String] = [
     "Welcome to GoatCode!",
     "Let’s get right into talking about code!",
     "Code is written in a file such as this",
+    "IMG: blockCode",
     "It is generally read from top to bottom, and the computer will also read it from top to bottom.",
     "The language being taught in this curriculum is Python. Python is known for being simple and concise. In other words, each word holds a lot of power.",
     "Python also has an extensive online community. If you are ever lost on a question, feel free to do some online research."
@@ -88,6 +220,10 @@ let unit1_lesson3: [String] = [
     "The solution to this is called a “variable”",
     "On to chapter 2!"
 ]
+
+
+// ---------------------------- UNIT 2 ----------------------------
+
 
 let unit2_lesson1: [String] = [
     "Variables are like containers that hold information in the world of programming.",
@@ -184,7 +320,6 @@ let unit2_lesson4: [String] = [
 //mcq
 ]
 
-
 let unit2_lesson5: [String] = [
     "Type casting is a way to change the data type of a variable in Python.",
     "It's like putting on different hats for a variable, allowing it to take on different forms depending on what we need it to be.",
@@ -210,6 +345,10 @@ let unit2_lesson5: [String] = [
     "So, it's essential to ensure that the data we are trying to convert can be successfully cast to the desired type."
 //mcq2
 ]
+
+
+// ---------------------------- UNIT 3 ----------------------------
+
 
 let unit3_lesson1: [String] = [
     "Basic logic is an essential concept in programming that helps us make decisions and execute different actions based on specific conditions.",
@@ -308,6 +447,10 @@ let unit3_lesson3: [String] = [
     //MCQ HERE
 ]
 
+
+// ---------------------------- UNIT 4 ----------------------------
+
+
 let unit4_lesson1: [String] = [
     "Imagine you have a basket, and you want to put different types of fruits in it.",
     "In Python, a list is like that basket where you can store various things, such as fruits, numbers, or even other lists.",
@@ -397,6 +540,10 @@ let unit4_lesson3: [String] = [
     "QST: U4_L3_Q1"
 ]
 
+
+// ---------------------------- UNIT 5 ----------------------------
+
+
 let unit5_lesson1: [String] = [
     "In the world of programming, iteration is a powerful concept that allows us to perform repetitive tasks or operations on a collection of items.",
     "It is used to go through each item in a group, examine it, and take some action based on it.",
@@ -442,6 +589,10 @@ let unit5_lesson3: [String] = [
     "So go ahead and embrace the power of the for loop to simplify your coding journey!",
     "QST: U5_L3_Q1"
 ]
+
+
+// ---------------------------- UNIT 6 ----------------------------
+
 
 let unit6_lesson1: [String] = [
     "Let's take a moment to refresh our memory on the input and output functions in Python. These functions help us interact with our programs by providing a way to receive information from the user and display results or messages.",
@@ -529,25 +680,6 @@ let unit6_lesson3: [String] = [
     "",
     "These functions provide a straightforward way to find the minimum and maximum values from a set of numbers or elements, allowing you to make comparisons and perform calculations based on the extremities of a dataset."
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
