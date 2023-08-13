@@ -7,7 +7,7 @@
 
 import Foundation
 
-let lessonMapper: [Double: [String]] = [1.1: unit1_lesson0, 1.2: unit1_lesson1, 1.3: unit1_lesson2, 2.1: unit2_lesson0, 2.2: unit2_lesson1, 2.3: unit2_lesson3, 2.4: unit2_lesson3, 2.5: unit2_lesson4, 3.1: unit3_lesson1, 3.2: unit3_lesson2, 3.3: unit3_lesson3, 4.1: unit4_lesson1, 4.2: unit4_lesson2, 4.3: unit4_lesson3]
+let lessonMapper: [Double: [String]] = [1.1: unit1_lesson0, 1.2: unit1_lesson1, 1.3: unit1_lesson2, 2.1: unit2_lesson0, 2.2: unit2_lesson1, 2.3: unit2_lesson3, 2.4: unit2_lesson3, 2.5: unit2_lesson4, 3.1: unit3_lesson1, 3.2: unit3_lesson2, 3.3: unit3_lesson3, 4.1: unit4_lesson1, 4.2: unit4_lesson2, 4.3: unit4_lesson3, 5.1:unit5_lesson1, 5.2:unit5_lesson2, 5.3:unit5_lesson3, 6.1:unit6_lesson1, 6.2:unit6_lesson2, 6.3:unit6_lesson3]
 
 let questionMapper: [String: [String]] = ["U1_L0_Q1":U1_L0_Q1]
 // To add an image, put image in "lessonPictures" and add it to array like this
@@ -348,8 +348,148 @@ let unit4_lesson3: [String] = [
     "student[\"school\"] = \"Elementary School\"",
     "This code adds a new key \"school\" with the value \"Elementary School\" to the “student” dictionary.",
     "Dictionaries provide a convenient way to organize and retrieve data using keys and values.",
-    "They are great for storing information that needs to be looked up quickly or when you want to group related pieces of data together."
+    "They are great for storing information that needs to be looked up quickly or when you want to group related pieces of data together.",
+    "QST: U4_L3_Q1"
 ]
+
+let unit5_lesson1: [String] = [
+    "In the world of programming, iteration is a powerful concept that allows us to perform repetitive tasks or operations on a collection of items.",
+    "It is used to go through each item in a group, examine it, and take some action based on it.",
+    "Think of it as exploring a treasure chest full of different objects, where you inspect and handle each item one by one.",
+    "In Python, iteration is a fundamental concept that enables us to work with collections of data, such as lists, strings, or dictionaries. It allows us to process each element individually and perform specific operations or calculations on them.",
+    "By using iteration, we can automate repetitive tasks and make our programs more efficient. It saves us from manually repeating the same code over and over again.",
+    "With iteration, we can handle large amounts of data, process each piece of information, and make decisions or perform actions based on them.",
+    "Whether we want to analyze a large dataset, manipulate text, or perform complex calculations, iteration is a fundamental tool that empowers us to handle diverse situations.",
+    "It allows us to traverse through the elements of a collection, access and manipulate data, and execute a set of instructions for each item.",
+    "So, next time you encounter a situation where you have a group of items and need to perform a task on each one, remember that iteration is your friend.",
+    "It helps you tackle repetitive tasks efficiently and unlocks the potential to solve complex problems with ease.",
+    "QST: U5_L1_Q1"
+]
+
+let unit5_lesson2: [String] = [
+    "Alright, now that you're familiar with the concept of iteration, let's dive into a special type of loop called the \"while loop.\"",
+    "Imagine a magic spell that repeats an action as long as a certain condition is true. Well, that's exactly what the while loop does in Python!",
+    "A while loop is like a persistent friend who helps you count stars in the sky one by one, and they won't stop until you say so!",
+    "In Python, the while loop allows us to repeat a block of code as long as a certain condition remains true. It's a powerful tool that helps us solve problems that require continuous repetition until a particular condition is met.",
+    "Here's the basic idea of a while loop:\n\n1. Check if a condition is true.\n2. If the condition is true, execute the block of code inside the loop.\n3. After executing the code inside the loop, go back to step 1 and check the condition again.\n4. Keep repeating steps 1 to 3 until the condition becomes false.",
+    "Let's see an example of a while loop in action. Suppose we want to count down from 10 to 1 and print each number. We can use a while loop to achieve this:\n\ncount = 10\n\nwhile count >= 1:\n    print(count)\n    count = count - 1",
+    "In this code, we start with the “count” variable set to 10. The while loop checks if the condition “count >= 1” is true. If it is, it executes the code block inside the loop, which prints the current value of “count” and then subtracts 1 from it.",
+    "The loop continues until the condition becomes false. As “count” is decreased with each iteration, eventually it will reach a value less than 1, causing the condition to be false and the loop to terminate.",
+    "Running this code will output:\n\n10\n9\n8\n7\n6\n5\n4\n3\n2\n1",
+    "While loops are an excellent tool when you have tasks that need to be repeated until a certain condition changes.",
+    "They help you save time and effort, making your programs more efficient and fun to use. Just remember, like all powerful spells, while loops require careful use and a good understanding of the conditions you set!",
+    "QST: U5_L2_Q1"
+]
+
+let unit5_lesson3: [String] = [
+    "Alright, let's move on to another powerful tool in Python called the \"for loop.\"",
+    "Just like a conveyor belt that carries items one by one for inspection, the for loop helps us go through a collection of items, one at a time, and perform an action on each item.",
+    "A for loop allows us to loop over a sequence of elements, such as a list or a string, and perform the same set of actions on each element.",
+    "It's like having a robot friend who diligently picks up each toy in a box and puts it away in its proper place.",
+    "In Python, the for loop is designed to work with collections of items, making it easier to process and manipulate data. It's a valuable tool when we want to perform repetitive tasks on a group of related items.",
+    "Here's the basic idea of a for loop:\n\n1. Choose a collection of items that you want to loop over.\n2. For each item in the collection, do something with that item.\n3. Repeat step 2 for every item in the collection.",
+    "Let's see an example of a for loop in action. Suppose we have a list of animals, and we want to print each animal's name:\n\nanimals = [\"cat\", \"dog\", \"elephant\", \"lion\"]\n\nfor animal in animals:\n    print(animal)",
+    "In this code, we have a list called `animals` that contains different animal names. The for loop iterates over each item in the `animals` list.",
+    "For each animal, it executes the code block inside the loop, which simply prints the name of the animal.",
+    "The loop continues until all the items in the list have been processed. Each time through the loop, the variable `animal` takes on the value of the current item, allowing us to perform actions on that item.",
+    "Running this code will output:\n\ncat\ndog\nelephant\nlion",
+    "The for loop is a versatile tool that can be used in various situations. Whether you want to process a list of numbers, analyze a string character by character, or perform complex calculations, the for loop is here to help you.",
+    "Remember, just like our diligent robot friend, the for loop takes care of each item in the collection, allowing us to focus on what we want to do with that item.",
+    "So go ahead and embrace the power of the for loop to simplify your coding journey!",
+    "QST: U5_L3_Q1"
+]
+
+let unit6_lesson1: [String] = [
+    "Let's take a moment to refresh our memory on the input and output functions in Python. These functions help us interact with our programs by providing a way to receive information from the user and display results or messages.",
+    "When we want to get information from the user, we can use the input() function. It's like asking a question and waiting for an answer. The user can type in their response, and Python will store it in a variable. For example:",
+    "name = input(\"What is your name? \")",
+    "Here, the “input()” function asks the user for their name and waits for them to type it. The name they enter is then stored in the variable “name”, so we can use it later in our program.",
+    "On the other hand, when we want to display information or results to the user, we can use the “print()” function. It's like writing a message on a screen. We can pass in values or variables to the “print()” function, and it will display them for us. For example:",
+    "print(\"Hello, \" + name + \"! Nice to meet you.\")",
+    "Here, the “print()” function displays a greeting message along with the value stored in the “name” variable.",
+    "Now, let's talk about the idea of returning in functions. In Python, we can define our own functions to perform specific tasks. These functions can accept inputs, process them, and provide an output by “returning”.",
+    "When a function returns a value, it means it's giving us back something we can use. It's like ordering a pizza and getting it delivered to your doorstep. The pizza is the result of the function, and we can enjoy it in our program.",
+    "For example, let's say we have a function called “add_numbers()” that adds two numbers together:",
+    "Here, the “add_numbers()” function takes two numbers as inputs, adds them together, and returns the sum. We can store the result in a variable and use it later:",
+    "result = add_numbers(5, 3)",
+    "print(result)  # Output: 8",
+    "In this case, calling the “add_numbers()” function with the arguments 5 and 3 returns the value 8, which is then stored in the variable “result” and printed.",
+    "So, input and output functions like “input()” and “print()” allow us to interact with our programs, while “returning” in functions allows us to obtain and use the results they produce."
+]
+
+let unit6_lesson2: [String] = [
+    "Let's dive into the world of functions in Python! Functions are like mini-programs within our larger program that perform specific tasks.",
+    "They allow us to write reusable pieces of code, making our programs more organized and efficient.",
+    "To create a function, we use the `def` keyword followed by the name we want to give to our function. It's like giving a special name to a set of instructions.",
+    "def greet():",
+    "    print(\"Hello, welcome to the GoatCode!\")",
+    "Here, we define a function called “greet()”. Whenever we call this function, it will print the message \"Hello, welcome to the program!\"",
+    "To use our function, we simply write its name followed by parentheses. It's like telling Python to execute those specific instructions.",
+    "greet()  # Output: Hello, welcome to the GoatCode!",
+    "When we call the “greet()” function, it prints the message for us to see. We can use functions whenever we want to perform a particular task repeatedly.",
+    "Sometimes, functions need some information to work with. We can provide this information by passing arguments to the function. It's like giving it additional instructions based on what we want it to do.",
+    "def greet(name):",
+    "    print(\"Hello, \" + name + \"! Welcome to the program!\")",
+    "greet(\"Alice\")  # Output: Hello, Alice! Welcome to GoatCode!",
+    "In this example, we modified our “greet()” function to accept an argument called “name”. When we call the function and pass the value \"Alice\" as the argument, it uses that value to customize the message it prints.",
+    "Functions can also return values to us. It's like a function giving us an answer or result that we can use in our program.",
+    "def add_numbers(num1, num2):",
+    "    sum = num1 + num2",
+    "    return sum",
+    "",
+    "result = add_numbers(3, 5)",
+    "print(result)  # Output: 8",
+    "Here, we created a function called “add_numbers()” that takes two numbers as arguments, adds them together, and returns the sum. We store the result in the variable “result” and print it.",
+    "By using functions, we can break down complex tasks into smaller, manageable pieces. Each function can have its own specific job, making our code easier to read, understand, and maintain.",
+    "Remember, creating a function involves using the `def` keyword, providing a name, and defining its behavior with instructions.",
+    "We can call the function to execute those instructions and even pass in arguments or receive return values to make our functions more flexible and powerful.",
+    "QST: U6_L1_Q1"
+]
+
+let unit6_lesson3: [String] = [
+    "The “len()” function in Python helps us find the length of various things, like strings, lists, and more. It's like a measuring tool that tells us how many elements or characters are in something.",
+    "For example, let's say we have a string called “message” that contains the phrase \"Hello, world!\". We can use the “len()” function to find out how many characters are in that string.",
+    "message = \"Hello, world!\"",
+    "length = len(message)",
+    "print(length)  # Output: 13",
+    "In this example, we use the “len()” function on the “message” string and store the result in a variable called “length”. Then we print the value of “length”, which is 13 because the string has 13 characters.",
+    "We can also use the “len()” function with other data types, like lists. Let's say we have a list of numbers, and we want to know how many elements are in that list.",
+    "numbers = [1, 2, 3, 4, 5]",
+    "count = len(numbers)",
+    "print(count)  # Output: 5",
+    "Here, we apply the “len()” function to the “numbers” list and store the result in a variable called “count”. The “count” variable holds the value 5 because the list has 5 elements.",
+    "The “len()” function is a useful tool when we need to work with the size or length of things in our programs. It allows us to dynamically determine the number of elements in a string, list, or other data structures.",
+    "QST: U6_L3_Q1",
+    "The pow() function in Python is used to raise a number to a specified power. It allows us to perform exponential calculations easily.",
+    "To use the pow() function, you write pow() followed by two numbers inside parentheses. The first number is the base, and the second number is the exponent. For example, pow(2, 3) would calculate 2 raised to the power of 3, resulting in 8.",
+    "The pow() function can be helpful in various scenarios, such as calculating compound interest, solving mathematical problems, or performing complex calculations.",
+    "It provides a convenient way to raise numbers to specific powers without having to write out multiple multiplication operations.",
+    "",
+    "The “min()” and “max()” functions in Python are used to find the smallest and largest values in a given set of numbers or elements.",
+    "To use the “min()” function, you pass a series of numbers or elements separated by commas inside the parentheses. It will return the smallest value from the provided set.",
+    "To use the “max()” function, you follow the same pattern but expect the largest value as the result.",
+    "These functions can be useful when you need to find the minimum or maximum value in a list, compare different values, or determine the range of a dataset.",
+    "Here's an example that demonstrates the usage of `min()` and `max()`:",
+    "numbers = [5, 2, 9, 1, 7]",
+    "smallest = min(numbers)",
+    "largest = max(numbers)",
+    "",
+    "print(\"The smallest number is:\", smallest)",
+    "print(\"The largest number is:\", largest)",
+    "",
+    "In this example, we have a list of numbers “[5, 2, 9, 1, 7]”. By using the “min()” function, we find the smallest number in the list, which is 1. Similarly, with the “max()” function, we determine the largest number, which is 9.",
+    "When you run this code, it will output:",
+    "",
+    "The smallest number is: 1",
+    "The largest number is: 9",
+    "",
+    "These functions provide a straightforward way to find the minimum and maximum values from a set of numbers or elements, allowing you to make comparisons and perform calculations based on the extremities of a dataset."
+]
+
+
+
+
+
 
 
 
