@@ -20,6 +20,7 @@ struct MultipleChoiceQuestionView: View {
             Text(question)
                 .font(.headline)
                 .frame(maxWidth: UIScreen.main.bounds.width)
+                .preferredColorScheme(.light)
 
 
             // Display options in a 2x2 grid
