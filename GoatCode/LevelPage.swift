@@ -119,7 +119,7 @@ struct LevelPage: View {
                         .offset(x: 200, y: 20)
                         .foregroundColor(.white)
                 }
-                .padding(.bottom, 30)
+                .padding(35)
                 
                 // Goat PNG
                 HStack {
@@ -132,7 +132,7 @@ struct LevelPage: View {
                     Spacer()
                     VStack{
                         Spacer()
-                            .frame(height: 100)
+                            .frame(height: 90)
                         HStack{
                             Image("chevron-back-outline")
                                 .resizable()
@@ -149,7 +149,7 @@ struct LevelPage: View {
                                 .fontWeight(.medium)
                                 .foregroundColor(Color.black)
                                 .padding(.bottom, 10)
-                                .frame(width: 40)
+                                .frame(width: 50, alignment: .center)
                             
                             Image("chevron-forward-outline")
                                 .resizable()
@@ -165,7 +165,7 @@ struct LevelPage: View {
                                     }
                                 }
                             Spacer()
-                                .frame(width: 20)
+                                .frame(width: 30)
                         }
                     }
                 }
