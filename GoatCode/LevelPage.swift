@@ -148,7 +148,7 @@ struct LevelPage: View {
                     Image("chevron-back-outline")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 50.0)
+                        .frame(width: 40.0)
                         .onTapGesture {
                             if messageIndex > 0 {
                                 messageIndex -= 1
@@ -156,7 +156,7 @@ struct LevelPage: View {
                         }
                     
                     Text("\(messageIndex + 1)/\(messages.count)")
-                        .font(.title2)
+                        .font(.title3)
                         .fontWeight(.medium)
                         .foregroundColor(Color.black)
                         .padding(.bottom, 10)
@@ -164,7 +164,7 @@ struct LevelPage: View {
                     Image("chevron-forward-outline")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 50.0)
+                        .frame(width: 40.0)
                         .onTapGesture {
                             if messageIndex < messages.count - 1 {
                                 messageIndex += 1
@@ -175,7 +175,7 @@ struct LevelPage: View {
                             }
                         }
                     
-                        .padding(.bottom, 30)
+                        //.padding(.bottom, 30)
                         .padding(.trailing, 30)
                 }
             }

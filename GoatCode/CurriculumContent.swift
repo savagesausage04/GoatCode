@@ -160,7 +160,7 @@ let U5_L3_Q1: [String] = ["Given a list named “goatNames”, print every item 
                           "for name in goatNames:\n    print(name)",
                           "for each name in goatNames:\n    print(name)",
                           "for name in goatNames:\n    print(“name”)",
-                          "for each name in goatNames:\    nprint(“name”)",
+                          "for each name in goatNames:\n   print(“name”)",
                           "for name in goatNames:\n    print(name)"]
 
 
