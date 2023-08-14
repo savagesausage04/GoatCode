@@ -119,7 +119,7 @@ struct LevelPage: View {
                         .offset(x: 200, y: 20)
                         .foregroundColor(.white)
                 }
-                .padding(35)
+                .padding(.bottom, 30)
                 
                 // Goat PNG
                 HStack {
@@ -130,97 +130,55 @@ struct LevelPage: View {
                         .padding(.bottom, 20)
                     
                     Spacer()
-                    VStack{
-                        Spacer()
-                            .frame(height: 90)
-                        HStack{
-                            Image("chevron-back-outline")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 50.0)
-                                .onTapGesture {
-                                    if messageIndex > 0 {
-                                        messageIndex -= 1
-                                    }
-                                }
-                            
-                            Text("\(messageIndex + 1)/\(messages.count)")
-                                .font(.title2)
-                                .fontWeight(.medium)
-                                .foregroundColor(Color.black)
-                                .padding(.bottom, 10)
-                                .frame(width: 50, alignment: .center)
-                            
-                            Image("chevron-forward-outline")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 50.0)
-                                .onTapGesture {
-                                    if messageIndex < messages.count - 1 {
-                                        messageIndex += 1
-                                    }
-                                    if (messageIndex == messages.count - 1){
-                                        newValue = lessonCall
-                                        addNewValue()
-                                    }
-                                }
-                            Spacer()
-                                .frame(width: 30)
-                        }
-                    }
                 }
                 
             }
             .padding(.horizontal, 10.0)
             
             // Buttons placement with message indicator
-//            VStack {
-//                Spacer()
+            VStack {
+                Spacer()
                 
                 // Message number indicator
                 // A little space from the buttons
                 
-//                HStack {
-//                    Spacer()
-//
-//                    Image("chevron-back-outline")
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .frame(width: 50.0)
-//                        .onTapGesture {
-//                            if messageIndex > 0 {
-//                                messageIndex -= 1
-//                            }
-//                        }
-//
-//                    Text("\(messageIndex + 1)/\(messages.count)")
-//                        .font(.title2)
-//                        .fontWeight(.medium)
-//                        .foregroundColor(Color.black)
-//                        .padding(.bottom, 10)
-//
-//                    Image("chevron-forward-outline")
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .frame(width: 50.0)
-//                        .onTapGesture {
-//                            if messageIndex < messages.count - 1 {
-//                                messageIndex += 1
-//                            }
-//                            if (messageIndex == messages.count - 1){
-//                                newValue = lessonCall
-//                                addNewValue()
-//                            }
-//                        }
-//                    Spacer()
-//                        .frame(width: 5)
-//
-//                        .padding(.bottom, 30)
-//                        .padding(.trailing, 30)
-//                }
-//                Spacer()
-//                    .frame(height: 2.2)
-//            }
+                HStack {
+                    Spacer()
+                    
+                    Image("chevron-back-outline")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50.0)
+                        .onTapGesture {
+                            if messageIndex > 0 {
+                                messageIndex -= 1
+                            }
+                        }
+                    
+                    Text("\(messageIndex + 1)/\(messages.count)")
+                        .font(.title2)
+                        .fontWeight(.medium)
+                        .foregroundColor(Color.black)
+                        .padding(.bottom, 10)
+                    
+                    Image("chevron-forward-outline")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50.0)
+                        .onTapGesture {
+                            if messageIndex < messages.count - 1 {
+                                messageIndex += 1
+                            }
+                            if (messageIndex == messages.count - 1){
+                                newValue = lessonCall
+                                addNewValue()
+                            }
+                        }
+                    
+                        .padding(.bottom, 30)
+                        .padding(.trailing, 30)
+                }
+            }
         }
     }
     
