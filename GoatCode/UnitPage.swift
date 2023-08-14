@@ -10,6 +10,7 @@ import Foundation
 
 
 struct UnitPage: View {
+    
     @AppStorage("completed") private var completedEncoded: Data = Data()
     
     @State private var goatRotationAngle: Double = 0.0

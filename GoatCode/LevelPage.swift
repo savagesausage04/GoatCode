@@ -24,6 +24,7 @@ let lessonNames = ["Brief intro","Hello World!","Taking Input",
                     ]
 
 struct LevelPage: View {
+    
     @State private var messageIndex = 0
     
     let goatImg: [String] = [
@@ -106,6 +107,7 @@ struct LevelPage: View {
                     {
                         Text(messages[messageIndex])
                             .font(.title2)
+                            .preferredColorScheme(.light)
                     }
                 }
                 .frame(maxWidth: .infinity)
