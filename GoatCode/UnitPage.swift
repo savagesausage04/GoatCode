@@ -10,7 +10,11 @@ import Foundation
 
 
 struct UnitPage: View {
-    
+    let goatImg: [String] = [
+        "goat-talking",
+        "goat-inquisitive",
+        "goat-err",
+    ]
     @AppStorage("completed") private var completedEncoded: Data = Data()
     
     @State private var goatRotationAngle: Double = 0.0
@@ -45,22 +49,31 @@ struct UnitPage: View {
                 VStack {
                     Spacer()  // Pushes content towards the center
                     
-                    Image("Goat")
+                    Image(goatImg[Int.random(in: 0..<3)])
                         .resizable()
                         .padding([.top, .leading, .trailing])
                         .cornerRadius(10)
                         .aspectRatio(contentMode: .fit)
+                        .onTapGesture{
+                            showHome = false
+                        }
                     
                     Text("Welcome to GoatCode")
                         .font(.largeTitle)
                         .fontWeight(.light)
                         .foregroundColor(Color.black)  
                         .offset(y: -40)
+                        .onTapGesture{
+                            showHome = false
+                        }
                     
-                    Text("Tap to continue...")
+                    Text("Tap to continue")
                         .font(.body)
                         .offset(y: 70)
                         .opacity(0.5)
+                        .onTapGesture{
+                            showHome = false
+                        }
 
 
                     Spacer()
