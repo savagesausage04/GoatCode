@@ -59,9 +59,15 @@ struct UnitPage: View {
                         .offset(y: 70)
                         .opacity(0.5)
 
-                    
+
                     Spacer()
                 }
+                
+                /*Image("helpIcon")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width:50, height:50)
+                    .offset(x: 130, y: -350)*/
                 
             }
         }

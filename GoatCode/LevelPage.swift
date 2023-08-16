@@ -93,6 +93,7 @@ struct LevelPage: View {
                         let qArr: [String] = questionMapper[String(messages[messageIndex].dropFirst(5))]!
                         MultipleChoiceQuestionView(question: qArr[0], options: [qArr[1],qArr[2],qArr[3],qArr[4]],correctAnswer:qArr[5])
                         //.rotationEffect(.degrees(180))
+                        
                     }
                     else
                     {

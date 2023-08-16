@@ -20,6 +20,7 @@
 		457079132A8843790093EA5C /* LessonPictures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457079122A8843790093EA5C /* LessonPictures.xcassets */; };
 		4570791A2A88C91F0093EA5C /* minecraft_font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 457079192A88C9120093EA5C /* minecraft_font.ttf */; };
 		D40EC7282A898CA300805314 /* GoatSprites.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D40EC7272A898CA300805314 /* GoatSprites.xcassets */; };
+		D4B201692A89A9CE009516C8 /* TutorialPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B201682A89A9CE009516C8 /* TutorialPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		457079122A8843790093EA5C /* LessonPictures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LessonPictures.xcassets; sourceTree = "<group>"; };
 		457079192A88C9120093EA5C /* minecraft_font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = minecraft_font.ttf; sourceTree = "<group>"; };
 		D40EC7272A898CA300805314 /* GoatSprites.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GoatSprites.xcassets; sourceTree = "<group>"; };
+		D4B201682A89A9CE009516C8 /* TutorialPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				1460EF252A37ADDD008A0847 /* GoatCodeApp.swift */,
 				1496893C2A5786FD000A8E4F /* HomePage.swift */,
 				1496893E2A579097000A8E4F /* UnitPage.swift */,
+				D4B201682A89A9CE009516C8 /* TutorialPage.swift */,
 				149689402A579414000A8E4F /* LevelPage.swift */,
 				457079102A8841AB0093EA5C /* CurriculumContent.swift */,
 				457079122A8843790093EA5C /* LessonPictures.xcassets */,
@@ -280,6 +283,7 @@
 			files = (
 				1496893D2A5786FD000A8E4F /* HomePage.swift in Sources */,
 				457079112A8841AB0093EA5C /* CurriculumContent.swift in Sources */,
+				D4B201692A89A9CE009516C8 /* TutorialPage.swift in Sources */,
 				1496893F2A579097000A8E4F /* UnitPage.swift in Sources */,
 				1460EF262A37ADDD008A0847 /* GoatCodeApp.swift in Sources */,
 				149689412A579414000A8E4F /* LevelPage.swift in Sources */,
