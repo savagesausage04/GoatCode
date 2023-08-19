@@ -57,6 +57,8 @@ struct UnitPage: View {
                         .onTapGesture{
                             showHome = false
                         }
+                    Spacer()
+                        .frame(height: 20)
                     
                     Text("Welcome to GoatCode")
                         .font(.largeTitle)
