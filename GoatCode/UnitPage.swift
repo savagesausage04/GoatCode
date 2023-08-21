@@ -175,6 +175,7 @@ struct UnitPage: View {
                     .edgesIgnoringSafeArea(.all)
                     .background(GradientBackgroundAnimation().edgesIgnoringSafeArea(.all))
                 }
+                .navigationViewStyle(StackNavigationViewStyle())
                 
             
         }
