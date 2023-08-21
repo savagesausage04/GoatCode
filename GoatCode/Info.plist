@@ -3,18 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDocumentTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeName</key>
-			<string>Fonts provided by application</string>
-			<key>LSHandlerRank</key>
-			<string>Default</string>
-		</dict>
-		<dict/>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>minecraft_font.ttf</string>
-	</array>
+	<array/>
 </dict>
 </plist>
