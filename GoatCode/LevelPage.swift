@@ -24,9 +24,10 @@ let lessonNames = ["Brief intro","Hello World!","Taking Input",
                     ]
 
 struct LevelPage: View {
-    
     @State private var messageIndex = 0
     @AppStorage("toggleGoat") var toggleGoat: Bool = true
+    @State private var wasLastAnswerCorrect: Bool? = nil
+
 
     let goatImg: [String] = [
         "goat-talking",
@@ -101,7 +102,8 @@ struct LevelPage: View {
                     else if (messages[messageIndex].prefix(3) == "QST")
                     {
                         let qArr: [String] = questionMapper[String(messages[messageIndex].dropFirst(5))]!
-                        MultipleChoiceQuestionView(question: qArr[0], options: [qArr[1],qArr[2],qArr[3],qArr[4]],correctAnswer:qArr[5])
+                        MultipleChoiceQuestionView(question: qArr[0], options: [qArr[1],qArr[2],qArr[3],qArr[4]],correctAnswer:qArr[5],isAnswerCorrect: $wasLastAnswerCorrect)
+                        
                         //.rotationEffect(.degrees(180))
                         
                     }
@@ -130,11 +132,39 @@ struct LevelPage: View {
                 // Goat PNG
                 HStack {
                     if toggleGoat{
-                        Image(goatImg[Int.random(in: 0..<4)])
-                            .resizable()
-                            .frame(width: 225.0, height: 225.0)
-                            .padding(.horizontal)
-                            .padding(.bottom, 20)
+                        if messages[messageIndex].prefix(3) == "QST"{
+                            if let wasCorrect = wasLastAnswerCorrect {
+                                if wasCorrect {
+                                    Image("goat-inquisitive")
+                                        .resizable()
+                                        .frame(width: 225.0, height: 225.0)
+                                        .padding(.horizontal)
+                                        .padding(.bottom, 20)
+                                } else {
+                                    Image("goat-err")
+                                        .resizable()
+                                        .frame(width: 225.0, height: 225.0)
+                                        .padding(.horizontal)
+                                        .padding(.bottom, 20)
+                                }
+                                
+                            }
+                            else{
+                                Image("goat-talking")
+                                    .resizable()
+                                    .frame(width: 225.0, height: 225.0)
+                                    .padding(.horizontal)
+                                    .padding(.bottom, 20)
+                            }
+                        }
+                        else{
+                            Image(goatImg[Int.random(in: 0..<4)])
+                                .resizable()
+                                .frame(width: 225.0, height: 225.0)
+                                .padding(.horizontal)
+                                .padding(.bottom, 20)
+
+                        }
                     }
 //                    else{
 //                        Spacer()

@@ -14,18 +14,18 @@ struct TutorialPage: View {
     
     let tutorialImgs = [
         "goat-inquisitive",
-        "goat-inquisitive",
-        "goat-inquisitive",
-        "goat-inquisitive",
-        "goat-inquisitive",
+        "goat-talking",
+        "goat-err",
+        "goat-talking",
+        "goat-talking",
         "goat-inquisitive",
         
     ]
     
     let tutorialText = [
         "Welcome to GoatCode! Thanks so much for downloading our app.",
-        "This app is designed to teach Python, which complements the AP Computer Science Principles curriculum, but is also great for learning for first-time coders.",
-        "We've tried to be as beginner-friendly as possible, so if you love the app or have any feedback, please leave us a review!",
+        "This app is designed to teach Python, which complements the AP Computer Science Principles curriculum but is also great for learning for first-time coders.",
+        "We've tried to make the experience as beginner-friendly as possible, so if you love the app or have any feedback, please leave us a review!",
         "The lessons are laid out in a path, with each one having a lesson-specific title.",
         "We also reccomend following along the curriculum with some note-taking and a laptop to follow along with the code in each lesson.",
         "We hope you have a great experience! Good luck, GoatCoder!"
@@ -50,6 +50,7 @@ struct TutorialPage: View {
                     //.frame(width: 300)
                     .padding([.leading, .trailing], 40)
                     .multilineTextAlignment(.center)
+                    .font(.title2)
                 
             }
             

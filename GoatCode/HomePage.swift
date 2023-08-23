@@ -13,6 +13,7 @@ struct MultipleChoiceQuestionView: View {
     let correctAnswer: String
     @State private var selectedOption: String? = nil
     @State private var showFeedback: Bool = false
+    @Binding var isAnswerCorrect: Bool?
 
     var body: some View {
         VStack(spacing: 20) {
@@ -38,6 +39,11 @@ struct MultipleChoiceQuestionView: View {
                 
                 // Check Answer button
                 Button(action: {
+                    if selectedOption == correctAnswer {
+                        isAnswerCorrect = true
+                    } else {
+                        isAnswerCorrect = false
+                    }
                     showFeedback = true
                 }) {
                     Text("Check Answer")
@@ -51,7 +57,8 @@ struct MultipleChoiceQuestionView: View {
 
                         return Alert(title: Text("Correct"), message: Text("That's the right answer!"), dismissButton: .default(Text("OK")))
                         
-                    } else {
+                    }
+                    else {
                         return Alert(title: Text("Wrong"), message: Text("Try again!"), dismissButton: .default(Text("OK")))
                     }
                 }
@@ -87,9 +94,7 @@ struct OptionButton: View {
 
 struct MultipleChoiceQuestionView_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleChoiceQuestionView(question: "What's the capital of France?",
-                                   options: ["London", "Berlin", "Paris", "Madrid"],
-                                   correctAnswer: "Paris")
+        Text("sorry for breaking this lol")
     }
 }
 

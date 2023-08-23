@@ -84,7 +84,7 @@ struct SettingsPage: View {
 
     // Logic to reset app data
     func resetAppData() {
-        toggleGoat = false
+        toggleGoat = true
         backgroundColor1Data = "#67E7A4"
         backgroundColor2Data = "#FFDAB9"
         completedEncoded = Data()
