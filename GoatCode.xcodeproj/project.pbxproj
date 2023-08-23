@@ -16,6 +16,8 @@
 		1496893D2A5786FD000A8E4F /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496893C2A5786FD000A8E4F /* HomePage.swift */; };
 		1496893F2A579097000A8E4F /* UnitPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1496893E2A579097000A8E4F /* UnitPage.swift */; };
 		149689412A579414000A8E4F /* LevelPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149689402A579414000A8E4F /* LevelPage.swift */; };
+		453DD1872A95C011002C3538 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453DD1862A95C011002C3538 /* SettingsPage.swift */; };
+		453DD18B2A95C571002C3538 /* colorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453DD18A2A95C571002C3538 /* colorExtension.swift */; };
 		457079112A8841AB0093EA5C /* CurriculumContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457079102A8841AB0093EA5C /* CurriculumContent.swift */; };
 		457079132A8843790093EA5C /* LessonPictures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457079122A8843790093EA5C /* LessonPictures.xcassets */; };
 		D40EC7282A898CA300805314 /* GoatSprites.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D40EC7272A898CA300805314 /* GoatSprites.xcassets */; };
@@ -52,6 +54,8 @@
 		1496893C2A5786FD000A8E4F /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		1496893E2A579097000A8E4F /* UnitPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitPage.swift; sourceTree = "<group>"; };
 		149689402A579414000A8E4F /* LevelPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPage.swift; sourceTree = "<group>"; };
+		453DD1862A95C011002C3538 /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
+		453DD18A2A95C571002C3538 /* colorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorExtension.swift; sourceTree = "<group>"; };
 		457079102A8841AB0093EA5C /* CurriculumContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumContent.swift; sourceTree = "<group>"; };
 		457079122A8843790093EA5C /* LessonPictures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LessonPictures.xcassets; sourceTree = "<group>"; };
 		D40EC7272A898CA300805314 /* GoatSprites.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GoatSprites.xcassets; sourceTree = "<group>"; };
@@ -111,7 +115,9 @@
 				1496893E2A579097000A8E4F /* UnitPage.swift */,
 				D4B201682A89A9CE009516C8 /* TutorialPage.swift */,
 				149689402A579414000A8E4F /* LevelPage.swift */,
+				453DD1862A95C011002C3538 /* SettingsPage.swift */,
 				457079102A8841AB0093EA5C /* CurriculumContent.swift */,
+				453DD18A2A95C571002C3538 /* colorExtension.swift */,
 				457079122A8843790093EA5C /* LessonPictures.xcassets */,
 				D40EC7272A898CA300805314 /* GoatSprites.xcassets */,
 				1460EF292A37ADDF008A0847 /* Assets.xcassets */,
@@ -280,8 +286,10 @@
 				1496893D2A5786FD000A8E4F /* HomePage.swift in Sources */,
 				457079112A8841AB0093EA5C /* CurriculumContent.swift in Sources */,
 				D4B201692A89A9CE009516C8 /* TutorialPage.swift in Sources */,
+				453DD18B2A95C571002C3538 /* colorExtension.swift in Sources */,
 				1496893F2A579097000A8E4F /* UnitPage.swift in Sources */,
 				1460EF262A37ADDD008A0847 /* GoatCodeApp.swift in Sources */,
+				453DD1872A95C011002C3538 /* SettingsPage.swift in Sources */,
 				149689412A579414000A8E4F /* LevelPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,11 @@ struct UnitPage: View {
         "goat-err",
     ]
     @AppStorage("completed") private var completedEncoded: Data = Data()
+    @AppStorage("tutorial_done") private var tutorial_done: Bool = true
+    @AppStorage("backgroundColor1") var backgroundColor1Data: String = "#67E7A4"
+    @AppStorage("backgroundColor2") var backgroundColor2Data: String = "#FFDAB9"
     
+    @State var tutorial_done_local: Bool = false
     @State private var goatRotationAngle: Double = 0.0
 
     var completed: [Double] {
@@ -43,6 +47,8 @@ struct UnitPage: View {
                     .edgesIgnoringSafeArea(.all)  // Ignore safe area to fill entire screen
                     .onTapGesture{
                         showHome = false
+                        tutorial_done_local = tutorial_done
+
                     }
                 
                 // Content of the page
@@ -56,6 +62,8 @@ struct UnitPage: View {
                         .aspectRatio(contentMode: .fit)
                         .onTapGesture{
                             showHome = false
+                            tutorial_done_local = tutorial_done
+
                         }
                     Spacer()
                         .frame(height: 20)
@@ -67,6 +75,8 @@ struct UnitPage: View {
                         .offset(y: -40)
                         .onTapGesture{
                             showHome = false
+                            tutorial_done_local = tutorial_done
+
                         }
                     
                     Text("Tap to continue")
@@ -75,6 +85,8 @@ struct UnitPage: View {
                         .opacity(0.5)
                         .onTapGesture{
                             showHome = false
+                            tutorial_done_local = tutorial_done
+
                         }
 
 
@@ -91,7 +103,10 @@ struct UnitPage: View {
         }
         //-----------------------------UNIT PAGE---------------------------------
         else {
-                NavigationView {
+            NavigationView {
+                ZStack(alignment:.topLeading){
+                    NavigationLink("", destination: TutorialPage(), isActive: $tutorial_done_local)
+                        .hidden()
                     ScrollView(showsIndicators: false) {
                         LazyVStack {
                             
@@ -113,7 +128,7 @@ struct UnitPage: View {
                                                "Lists","Slicing","Dictionaries",
                                                "Iteration","While Loops","For Loops",
                                                "I/O Refresher","Creating Functions","Standard Functions",
-                                                ]
+                            ]
                             
                             VStack(spacing: 40) {
                                 Spacer()
@@ -125,7 +140,7 @@ struct UnitPage: View {
                                     }
                                     
                                     Button(action: {
-
+                                        
                                     }) {
                                         NavigationLink(destination: LevelPage(lessonCall: unitsVal[index])) {
                                             ZStack {
@@ -136,13 +151,13 @@ struct UnitPage: View {
                                                     Text(String(unitsVal[index]))
                                                         .font(.system(size: 42, weight: .bold, design: .rounded))
                                                         .foregroundColor(.white)
-                                                        
+                                                    
                                                     Text(String(lessonNames[index]))
                                                         .font(.system(size: 22, weight: .bold, design: .rounded))
                                                         .foregroundColor(.white)
                                                         .frame(width: 140)
                                                 }
-                    
+                                                
                                             }
                                             .rotationEffect(.degrees(180))
                                             
@@ -174,8 +189,37 @@ struct UnitPage: View {
                     .rotationEffect(.degrees(180))
                     .edgesIgnoringSafeArea(.all)
                     .background(GradientBackgroundAnimation().edgesIgnoringSafeArea(.all))
+                    VStack{
+                        Button(action: {
+                            // Handle button tap
+                        }) {
+                            NavigationLink(destination: TutorialPage()) {
+                                Image(systemName: "questionmark.circle")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                    .foregroundColor(.blue)
+                            }
+                            
+                        }
+                        Spacer()
+                            .frame(height: 22)
+                        Button(action: {
+                            // Handle button tap
+                        }) {
+                            NavigationLink(destination: SettingsPage()) {
+                                Image(systemName: "gear")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                    .foregroundColor(.blue)
+                            }
+                            
+                        }
+                    }
+                    .padding()
                 }
-                .navigationViewStyle(StackNavigationViewStyle())
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+
                 
             
         }
@@ -212,8 +256,16 @@ struct GradientBackgroundAnimation: View {
     
     @State private var animateGradient: Bool = false
     
-    private let startColor: Color = Color("Gradient1")
-    private let endColor: Color = Color("Gradient2")
+    @AppStorage("backgroundColor1") var backgroundColor1Data: String = "#67E7A4"
+    @AppStorage("backgroundColor2") var backgroundColor2Data: String = "#FFDAB9"
+    
+    var startColor: Color {
+        Color(hex: backgroundColor1Data)
+    }
+    
+    var endColor: Color {
+        Color(hex: backgroundColor2Data)
+    }
     
     var body: some View {
             LinearGradient(colors: [startColor, endColor], startPoint: .topLeading, endPoint: .bottomTrailing)

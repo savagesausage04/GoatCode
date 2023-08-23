@@ -26,7 +26,8 @@ let lessonNames = ["Brief intro","Hello World!","Taking Input",
 struct LevelPage: View {
     
     @State private var messageIndex = 0
-    
+    @AppStorage("toggleGoat") var toggleGoat: Bool = true
+
     let goatImg: [String] = [
         "goat-talking",
         "goat-talking",
@@ -116,23 +117,35 @@ struct LevelPage: View {
                 .background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
                 .overlay(alignment: .bottomLeading) {
-                    Image(systemName: "arrowtriangle.down.fill")
-                        .font(.largeTitle)
-                        .rotationEffect(.degrees(30))
-                        .offset(x: 200, y: 20)
-                        .foregroundColor(.white)
+                    if toggleGoat{
+                        Image(systemName: "arrowtriangle.down.fill")
+                            .font(.largeTitle)
+                            .rotationEffect(.degrees(30))
+                            .offset(x: 200, y: 20)
+                            .foregroundColor(.white)
+                    }
                 }
                 .padding(.bottom, 30)
                 
                 // Goat PNG
                 HStack {
-                    Image(goatImg[Int.random(in: 0..<4)])
-                        .resizable()
-                        .frame(width: 225.0, height: 225.0)
-                        .padding(.horizontal)
-                        .padding(.bottom, 20)
+                    if toggleGoat{
+                        Image(goatImg[Int.random(in: 0..<4)])
+                            .resizable()
+                            .frame(width: 225.0, height: 225.0)
+                            .padding(.horizontal)
+                            .padding(.bottom, 20)
+                    }
+//                    else{
+//                        Spacer()
+//                            //.resizable()
+//                            .frame(width: 225.0, height: 225.0)
+//                            //.padding(.horizontal)
+//                            //.padding(.bottom, 20)
+//                    }
                     
                     Spacer()
+                        .padding()
                 }
                 
             }
