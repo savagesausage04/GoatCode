@@ -89,7 +89,9 @@ struct OptionButton: View {
         }
         //.frame(maxWidth: .infinity, alignment: .leading) // Makes sure the Button occupies the entire width and the text remains left-aligned.
     }
+
 }
+
 
 
 struct MultipleChoiceQuestionView_Previews: PreviewProvider {

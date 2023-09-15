@@ -27,6 +27,10 @@ struct LevelPage: View {
     @State private var messageIndex = 0
     @AppStorage("toggleGoat") var toggleGoat: Bool = true
     @State private var wasLastAnswerCorrect: Bool? = nil
+    
+    @Environment(\.presentationMode) var presentationMode
+
+
 
 
     let goatImg: [String] = [
@@ -45,6 +49,8 @@ struct LevelPage: View {
     //
     var lessonCall: Double
     @AppStorage("completed") private var completedEncoded: Data = Data()
+    
+    //@Binding var isPresented: Bool
 
     var completed: [Double] {
         get {
@@ -102,6 +108,7 @@ struct LevelPage: View {
                     else if (messages[messageIndex].prefix(3) == "QST")
                     {
                         let qArr: [String] = questionMapper[String(messages[messageIndex].dropFirst(5))]!
+                        //wasLastAnswerCorrect = nil
                         MultipleChoiceQuestionView(question: qArr[0], options: [qArr[1],qArr[2],qArr[3],qArr[4]],correctAnswer:qArr[5],isAnswerCorrect: $wasLastAnswerCorrect)
                         
                         //.rotationEffect(.degrees(180))
@@ -198,6 +205,8 @@ struct LevelPage: View {
                         .onTapGesture {
                             if messageIndex > 0 {
                                 messageIndex -= 1
+                                wasLastAnswerCorrect = nil
+
                             }
                         }
                     
@@ -212,8 +221,38 @@ struct LevelPage: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 40.0)
                         .onTapGesture {
+                            if (messageIndex == messages.count - 1)
+                            {
+                                if messages[messageIndex].prefix(3) == "QST"{
+                                    if let wasCorrect = wasLastAnswerCorrect{
+                                        if wasCorrect
+                                        {
+                                            presentationMode.wrappedValue.dismiss()
+                                        }
+                                    }
+
+                                }
+                                else{
+                                    presentationMode.wrappedValue.dismiss()
+                                }
+                                
+                            }
+
                             if messageIndex < messages.count - 1 {
-                                messageIndex += 1
+                                if messages[messageIndex].prefix(3) == "QST"{
+                                    if let wasCorrect = wasLastAnswerCorrect{
+                                        if wasCorrect
+                                        {
+                                            messageIndex += 1
+                                        }
+                                    }
+
+                                }
+                                else{
+                                    messageIndex += 1
+                                    wasLastAnswerCorrect = nil
+                                }
+                                
                             }
                             if (messageIndex == messages.count - 1){
                                 newValue = lessonCall
@@ -238,7 +277,8 @@ struct LevelPage: View {
     
 struct LevelPage_Previews: PreviewProvider {
     static var previews: some View {
-        LevelPage(lessonCall: 1.1)
+       // LevelPage(lessonCall: 1.1, isPresented: false)
+        Text("lol")
     }
     
 }

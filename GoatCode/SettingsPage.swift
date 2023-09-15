@@ -31,53 +31,60 @@ struct SettingsPage: View {
     
     var body: some View {
             NavigationView {
-                Form {
-                    // Toggle Goat Switch
-                    Toggle(isOn: $toggleGoat) {
-                        Text("Toggle Goat")
+                
+                    Form {
+                        // Toggle Goat Switch
+                        Toggle(isOn: $toggleGoat) {
+                            Text("Talking Goat")
+                        }
+                        
+                        // Reset App Data
+                        Button(action: {
+                            showResetConfirmation = true
+                        }) {
+                            Text("Reset App Data")
+                                .foregroundColor(.red)
+                        }
+                        .alert(isPresented: $showResetConfirmation) {
+                            Alert(title: Text("Reset All Data?"),
+                                  message: Text("Are you sure you want to reset all app data, including completed lessons? This cannot be undone."),
+                                  primaryButton: .destructive(Text("Reset")) {
+                                // Resetting the app data
+                                resetAppData()
+                            },
+                                  secondaryButton: .cancel())
+                        }
+                        
+                        // Color Pickers
+                        ColorPicker("Background Color 1", selection: Binding(get: {
+                            self.backgroundColor1
+                        }, set: {
+                            backgroundColor1Data = $0.toHex()
+                        }))
+                        
+                        ColorPicker("Background Color 2", selection: Binding(get: {
+                            self.backgroundColor2
+                        }, set: {
+                            backgroundColor2Data = $0.toHex()
+                        }))
+                        Text("")
+                        
+                        Text("Made with love by Aayush S, Ian C, Lucy X, and Kyle H.")
+                            .font(.caption)
+                        Text("Thanks for using our app! Go code GoatCode!")
+                            .font(.caption)
+                        
+                        
+                        // Leave a Review Option
+                        //                Button(action: {
+                        //                    // Prompt for review
+                        //                    SKStoreReviewController.requestReview()
+                        //                }) {
+                        //                    Text("Leave a review")
+                        //                }
                     }
-                    
-                    // Reset App Data
-                    Button(action: {
-                        showResetConfirmation = true
-                    }) {
-                        Text("Reset App Data")
-                            .foregroundColor(.red)
-                    }
-                    .alert(isPresented: $showResetConfirmation) {
-                        Alert(title: Text("Reset All Data?"),
-                              message: Text("Are you sure you want to reset all app data, including completed lessons? This cannot be undone."),
-                              primaryButton: .destructive(Text("Reset")) {
-                            // Resetting the app data
-                            resetAppData()
-                        },
-                              secondaryButton: .cancel())
-                    }
-                    
-                    // Color Pickers
-                    ColorPicker("Background Color 1", selection: Binding(get: {
-                        self.backgroundColor1
-                    }, set: {
-                        backgroundColor1Data = $0.toHex()
-                    }))
-                    
-                    ColorPicker("Background Color 2", selection: Binding(get: {
-                        self.backgroundColor2
-                    }, set: {
-                        backgroundColor2Data = $0.toHex()
-                    }))
-                    
-                    
-                    // Leave a Review Option
-                    //                Button(action: {
-                    //                    // Prompt for review
-                    //                    SKStoreReviewController.requestReview()
-                    //                }) {
-                    //                    Text("Leave a review")
-                    //                }
-                }
-                .navigationBarTitle("Settings", displayMode: .inline)
-                .navigationViewStyle(StackNavigationViewStyle())
+                    .navigationBarTitle("Settings", displayMode: .inline)
+                    .navigationViewStyle(StackNavigationViewStyle())
             }
             .navigationViewStyle(StackNavigationViewStyle())
         }

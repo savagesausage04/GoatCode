@@ -20,6 +20,9 @@ struct UnitPage: View {
     @AppStorage("backgroundColor1") var backgroundColor1Data: String = "#67E7A4"
     @AppStorage("backgroundColor2") var backgroundColor2Data: String = "#FFDAB9"
     
+    //@State var isLevelPagePresented = false
+
+    
     @State var tutorial_done_local: Bool = false
     @State private var goatRotationAngle: Double = 0.0
 
@@ -140,8 +143,8 @@ struct UnitPage: View {
                                     }
                                     
                                     Button(action: {
-                                        
                                     }) {
+                                        //NavigationLink(destination: LevelPage(lessonCall: unitsVal[index],isPresented: $isLevelPagePresented),isActive: $isLevelPagePresented) {
                                         NavigationLink(destination: LevelPage(lessonCall: unitsVal[index])) {
                                             ZStack {
                                                 Circle()
